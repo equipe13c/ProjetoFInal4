@@ -1,0 +1,68 @@
+root { 
+    display: block;
+}
+#imagem_usuario_listagem{
+    width: 22px;
+    height:22px;
+    margin-left:17px;
+    margin-top: 5px;
+}
+table.tabelas{
+border-collapse: collapse;
+border:1px solid black;
+}
+table.tabelas tr th {
+    border:1px solid black;
+    text-align:center;
+}
+#backPerfil{
+    width:200px;
+    float:left;
+    display:block;
+}
+#backIframe{
+    float:left;
+    width:1050px;
+    height:550px;    
+}
+#tela{
+    width:1050px;
+    height:550px;
+    float:left;
+    margin-left:0px;
+    margin-top:0px;
+    border:0px;
+    overflow: hidden;
+}
+.txtsAlterarDados{
+    float:right;
+}
+#frmAlterarDados{
+    width:370px;
+}
+.stringAlterarDados{
+    line-height: 20pt;
+}
+#frmlistarUser{
+    width:200px;
+}
+#frmNovoUsuario{
+    width:370px;
+}
+.stringNovoUsuario{
+    line-height: 20pt;
+}
+.txtsNovoUsuario{
+    float:right;
+}
+#imagemUser{
+    width:80px;
+    height:80px;
+    background-color: antiquewhite;
+}
+#imagem_usuario{
+    width:80px;
+    height:80px;
+    margin-left:0px;
+    margin-height:0px;
+}
