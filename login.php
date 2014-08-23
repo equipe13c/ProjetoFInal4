@@ -14,13 +14,17 @@ if($totalUSUARIO === 0){
 }
 else{
 //Agora preciso Testar a senha do usuário
-    $USUARIOs = mysql_fetch_array($result); 
-    $codeUSUARIO = $USUARIOs['COD_USUARIO'];
-    $senhaUSUARIO = $USUARIOs['SENHA_USUARIO'];
-    $tipoUSUARIO = $USUARIOs['TIPO_USUARIO'];
-    $nomeUSUARIO = $USUARIOs['NOME_USUARIO'];
+    $USUARIOS = mysql_fetch_array($result); 
+    $codeUSUARIO = $USUARIOS['COD_USUARIO'];
+    $senhaUSUARIO = $USUARIOS['SENHA_USUARIO'];
+    $tipoUSUARIO = $USUARIOS['TIPO_USUARIO'];
+    $nomeUSUARIO = $USUARIOS['NOME_USUARIO'];
+    if($tipoUSUARIO == "4"){
+               echo "Usuário Desativado <a href=javascript:history.go(-1);>Voltar</a>";
+            }
+    else{
     if (Bcrypt::check($senha, $senhaUSUARIO)) {
-    echo "<script> alert('ERRO') </script>";
+    echo "<script> alert('Senha Incorreta') </script>";
     }
     else{
         $_SESSION['code'] = $codeUSUARIO;
@@ -40,6 +44,7 @@ else{
     }
     else{
         echo 'Tipo de usuário inválido !';
+    }
     }
     }
     

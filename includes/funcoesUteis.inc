@@ -31,10 +31,10 @@ if(!isset($_SESSION['email']) or !isset($_SESSION['senha'])){
         $tipoBanco = $USUARIOs['TIPO_USUARIO']; 
         if (Bcrypt::check($senha, $senhaBanco)) {
             session_destroy();            
-            echo '<script> 
+        echo '<script> 
         alert("Acesso negado!\n Senha não confere.")
-    location.href="'.$link.'"
-            </script>';            
+        location.href="'.$link.'"
+         </script>';            
         }
         
     }else{
@@ -47,17 +47,15 @@ if(!isset($_SESSION['email']) or !isset($_SESSION['senha'])){
             
         }
 }
-
-if($tipo !== $tipoBanco ){
-    session_destroy();
+if($tipoBanco == '2'){
+if ($tipo !== $tipoBanco){
     echo '<script> 
        alert("Acesso negado!\n Você não tem permissão para acessar esta página!.")
     location.href="'.$link.'"
            </script>';
 }
-
 }
-
+}
 function get_post_action($name)
 {
     $params = func_get_args();

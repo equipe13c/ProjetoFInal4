@@ -11,7 +11,7 @@
 include '../includes/funcoesUteis.inc';
 include '../conexao/conecta.inc';
 
-switch (get_post_action('alterar', 'desativar', 'deletar')) {
+switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
     case 'alterar':
         //Inicio
         $code = $_POST['cod_user'];
@@ -40,13 +40,59 @@ switch (get_post_action('alterar', 'desativar', 'deletar')) {
 
         case 'desativar':
         //Inicio
-            
+        $code = $_POST['cod_user'];
+        validaAutenticacao('../index.php', '1'); 
+        $busca = "SELECT * FROM USUARIO WHERE COD_USUARIO=" . $code;
+        $resultado = mysql_query($busca);
+        $totalUsers = mysql_num_rows($resultado);
+        $users = mysql_fetch_assoc($resultado);
+        echo "
+        <fieldset id=frmAlterarDados>
+        <h4>Por que Desativar ". $users['NOME_USUARIO'] . " ?</h4>
+        <form action='desativarUsuario.php' method='post' id='frmAlterar' enctype='multipart/form-data'>
+        <input type='hidden'  readonly='readonly' class='txtsAlterarDados' id='id' size='35'  name='cod_user' value='" . $users['COD_USUARIO'] . "'>
+        <input type='hidden'  class='txtsAlterarDados' size='35' id='nome'  name='name' value='" . $users['NOME_USUARIO'] . "'>
+        <input type='hidden'  class='txtsAlterarDados'  size='35' id='data' name='data' value='" . $users['DATA_NASCIMENTO'] . "'>    
+        <input type='hidden'  class='txtsAlterarDados'  size='35' id='email' name='email' value='" . $users['EMAIL_USUARIO'] . "'>
+        <input type='hidden'  class='txtsAlterarDados' size='35' id='confirmemail' name='confirmemail' value='" . $users['EMAIL_USUARIO'] . "'>
+        <input type='hidden'  class='txtsAlterarDados' size='35' id='senha'  name='password' value='" . $users['SENHA_USUARIO'] . "'>
+        <label class='stringAlterarDados'>Motivo:</label><input type='text' name='motivo' maxlenght=40 size=40 required><br/>
+        <br/>
+        <input type='submit' id='desativarUsuario' value='Desativar'>
+        </form>
+        </fieldset>";        
         //Fim
         break;
+        case 'reativar';
         //Inicio
+        validaAutenticacao('../index.php', '1');
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $data = $_POST['dataNasc'];
+        $code = $_POST['cod_user'];
+        $motivo = $_POST['motivo'];
+        function salvaLog($mensagem,$name,$data,$code,$motivo,$email) {
+        $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
+        $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
+        $acao = "reativarUsuario";
+        $dia = date('Y-m-d');
+        $sql = "INSERT INTO LOG(COD_LOG, IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG)
+            VALUES(".$_SESSION['code'].",'$ip','$dia', '$hora', '$mensagem', '$acao','$email')";
+        mysql_query($sql);
+        $sql2 = "UPDATE USUARIO SET TIPO_USUARIO = 2, USUARIO_DESATIVADO = null WHERE COD_USUARIO = $code";
+        mysql_query($sql2);
+        $query = "DELETE FROM DESATIVADOS WHERE COD_DESATIVADO = $code";
+        mysql_query($query);
 
+        echo "$mensagem às <b>$hora</b> do dia <b>$dia</b>";
+        }
+        echo "<meta charset=utf-8>";
+        $mensagem = "Usuário $name Reativado";
+        salvaLog($mensagem,$name,$data,$code,$motivo,$email);
         //Fim
+        break;
         case 'deletar':
+        //Inicio
         $code = $_POST['cod_user'];
         validaAutenticacao('../index.php', '1');    
         $busca = "SELECT * FROM USUARIO WHERE COD_USUARIO=" . $code;
@@ -63,6 +109,7 @@ switch (get_post_action('alterar', 'desativar', 'deletar')) {
         else{
         echo "ERRO AO DELETAR USUÁRIO"; 
         }
+        //Fim
         break;
 
     default:

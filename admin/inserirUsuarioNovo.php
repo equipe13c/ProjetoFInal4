@@ -8,7 +8,7 @@ $senha = $_POST['senha'];
 $confirmsenha = $_POST['confirmsenha'];
 $email = $_POST['email'];
 $confirmemail = $_POST['confirmemail'];
-$data = $_POST['dataNasc'];
+$data = $_POST['data'];
 $tipo = $_POST['tipoUser'];
 
 if(!($senha !== $confirmsenha)&& !($email !== $confirmemail))
@@ -30,7 +30,18 @@ if($email === ""){
 }
 else{
   if(mysql_query($query)){
-    echo "Obrigado Por Se Cadastrar";
+    echo "Novo Usuário cadastrado";
+    $codigo = mysql_query("SELECT COD_USUARIO FROM USUARIO WHERE EMAIL_USUARIO = '$email'");   
+                $resultCode = mysql_num_rows($codigo);
+if($resultCode === 0){
+}
+else{
+$codigos = mysql_fetch_array($codigo); 
+$codUsuario = $codigos['COD_USUARIO'];                
+$nome = "default.jpg";            
+mysql_query("INSERT INTO IMAGEM_USUARIO(URL_IMAGEM, COD_IMAGEM_USUARIO)
+VALUES('$nome',$codUsuario)");
+}
 }
 else{
     echo "Não Foi Possível Realizar o Cadastro<br/>";

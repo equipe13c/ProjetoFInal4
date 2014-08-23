@@ -22,12 +22,11 @@
                 $result = mysql_query($query);                
                 $imagens = mysql_num_rows($result);
 if($imagens === 0){
-    $nome = "default.jpg";            
+$nome = "default.jpg";            
 mysql_query("INSERT INTO IMAGEM_USUARIO(URL_IMAGEM, COD_IMAGEM_USUARIO)
 VALUES('$nome'".$_SESSION['code'].")");
 }
 else{
-//Agora preciso Testar a senha do usuário
     $imagens2 = mysql_fetch_array($result); 
     $urlImagem = $imagens2['URL_IMAGEM'];
                 echo "<img src='../uploads/$urlImagem' id='imagem_usuario' alt='imagem'>";
