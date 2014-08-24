@@ -28,6 +28,7 @@ validaAutenticacao('../index.php', '1');
         <label class='stringAlterarDados'>Confirm. E-mail:</label><input type='text'  class='txtsAlterarDados' size='35' id='confirmemail' name='confirmemail' value='" . $users['EMAIL_USUARIO'] . "'><br/>
         <label class='stringAlterarDados'>Senha:</label><input type='password'  class='txtsAlterarDados' size='35' id='senha'  name='password'><br/>
         <label class='stringAlterarDados'>Confirm. Senha:</label><input type='password'  class='txtsAlterarDados' size='35' id='confirmsenha'  name='confirmsenha'><br/>    
+        <label class='stringAlterarDados'>Alterar Foto:</label><input type='file' name='arquivo'><br/>
         <br/>
         <input type='submit' id='buttonAlterar' value='Atualizar'>
         </form>

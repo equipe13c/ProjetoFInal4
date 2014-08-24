@@ -18,10 +18,11 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $senha = $_POST['password'];
 $code = $_POST['cod_user'];
+$tipo = $_POST['tipo'];
 
 $sql = "UPDATE USUARIO SET NOME_USUARIO = '$name', EMAIL_USUARIO = '$email', SENHA_USUARIO = '$senha' WHERE COD_USUARIO = $code";
   if(mysql_query($sql)){
-    echo "Dados Atualizados";
+    echo "Dados Atualizados<br/>";
                 //echo '<script>setTimeout("window.location='. "'" ."indexrestrito.php'" . '", 2000);</script>';
 }
 else{
@@ -69,11 +70,11 @@ $salt = geraSaltAleatorio();
     }
 }
 $nome = $nome_final;
-$sql = "UPDATE IMAGEM_USUARIO SET URL_IMAGEM = '$nome' WHERE COD_IMAGEM_USUARIO = $code";
+$sql = "UPDATE IMAGEM_USUARIO SET URL_IMAGEM = '$nome' WHERE COD_IMAGEM_USUARIO =" . $code;
 
 if(mysql_query($sql)){
     echo "Imagem Atualizada";
-    echo "<a href=index.php>Voltar</a>";
+    echo "<a href=listar.php?tipoUser=$tipo>Voltar</a>";
 }
 else{
     echo "erro atualizar imagem";
