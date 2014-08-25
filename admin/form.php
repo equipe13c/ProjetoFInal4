@@ -12,7 +12,7 @@ include '../includes/funcoesUteis.inc';
 include '../conexao/conecta.inc';
 
 switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
-    case 'alterar':
+        case 'alterar':
         //Inicio
         $code = $_POST['cod_user'];
         validaAutenticacao('../index.php', '1'); 
@@ -38,7 +38,6 @@ switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
         </fieldset>";
         //Fim
         break;
-
         case 'desativar':
         //Inicio
         $code = $_POST['cod_user'];
@@ -76,37 +75,64 @@ switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
         function salvaLog($mensagem,$name,$data,$code,$motivo,$email) {
         $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
         $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
-        $acao = "reativarUsuario";
+        $acao = 5;
         $dia = date('Y-m-d');
-        $sql = "INSERT INTO LOG(COD_LOG, IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG)
-            VALUES(".$_SESSION['code'].",'$ip','$dia', '$hora', '$mensagem', '$acao','$email')";
+        $sql = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
+        VALUES('$ip','$dia', '$hora', '$mensagem', '$acao','".$_SESSION['email']."',".$_SESSION['code'].")";
         mysql_query($sql);
         $sql2 = "UPDATE USUARIO SET TIPO_USUARIO = 2, USUARIO_DESATIVADO = null WHERE COD_USUARIO = $code";
         mysql_query($sql2);
         $query = "DELETE FROM DESATIVADOS WHERE COD_DESATIVADO = $code";
         mysql_query($query);
-
         echo "$mensagem às <b>$hora</b> do dia <b>$dia</b>";
         }
         echo "<meta charset=utf-8>";
-        $mensagem = "Usuário $name Reativado";
+        $busca2 = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
+        $resultado2 = mysql_query($busca2);
+        $totalUsers2 = mysql_num_rows($resultado2);
+        $users2 = mysql_fetch_assoc($resultado2);
+        $sql2 = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users2['ACAO_LOG'];   
+        $resultado3 = mysql_query($sql2);
+        $mensagem = "Usuário $name $resultado3"; 
         salvaLog($mensagem,$name,$data,$code,$motivo,$email);
         //Fim
         break;
         case 'deletar':
         //Inicio
         $code = $_POST['cod_user'];
-        validaAutenticacao('../index.php', '1');    
+        validaAutenticacao('../index.php', '1');  
+        function salvaLog($mensagem,$name,$data,$code,$motivo,$email) {
+        $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
+        $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
+        $acao = 4;
+        $dia = date('Y-m-d');
+        $sql = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
+        VALUES('$ip','$dia', '$hora', '$mensagem', '$acao','".$_SESSION['email']."',".$_SESSION['code'].")";
+        mysql_query($sql);
+        }
         $busca = "SELECT * FROM USUARIO WHERE COD_USUARIO=" . $code;
         $resultado = mysql_query($busca);
         $totalUsers = mysql_num_rows($resultado);
         $users = mysql_fetch_assoc($resultado);
-        $sql = "DELETE FROM USUARIO WHERE COD_USUARIO = $code";
+        $sql = "DELETE FROM USUARIO WHERE COD_USUARIO = $code";        
         if(mysql_query($sql)){
+            
+        $busca2 = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
+        $resultado2 = mysql_query($busca2);
+        $totalUsers2 = mysql_num_rows($resultado2);
+        $users2 = mysql_fetch_assoc($resultado2);
+        $sql2 = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users2['ACAO_LOG'];   
+        $resultado3 = mysql_query($sql2);
+        $mensagem = "Usuário $name $resultado3"; 
+        salvaLog($mensagem,$name,$data,$code,$motivo,$email);
+        
         echo "Nome: " . $users['NOME_USUARIO'] . "<br/>";
         echo "E-mail: " . $users['EMAIL_USUARIO'] . "<br/>";
         echo "Código: " . $users['COD_USUARIO'] . "<br/>";
-        echo "Foi Deletado Pelo ADM: <b>".$_SESSION['nome']."</b> às <b>00:00:00</b> Horas Dia <b>00/00/00<b/>";
+        $hora = date('Y-m-d H:i:s');
+        $dia = date('d-m-Y');
+        echo "$mensagem Pelo ADM: <b>".$_SESSION['nome']."</b> às <b>$hora</b> Horas Dia <b>$dia<b/>";
+        echo "<a href=javascript:history.go(-1);>Voltar </a>";        
         }
         else{
         echo "ERRO AO DELETAR USUÁRIO"; 

@@ -21,10 +21,10 @@ $motivo = $_POST['motivo'];
 function salvaLog($mensagem,$name,$senha,$data,$code,$motivo,$email) {
 $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
 $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
-$acao = "DeletarUsuario";
+$acao = 3;
 $dia = date('Y-m-d');
-$sql = "INSERT INTO LOG(COD_LOG, IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG)
-    VALUES(".$_SESSION['code'].",'$ip','$dia', '$hora', '$mensagem', '$acao','$email')";
+$sql = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
+    VALUES('$ip','$dia', '$hora', '$mensagem', $acao,'".$_SESSION['email']."',".$_SESSION['code'].")";
 mysql_query($sql);
 $query = "INSERT INTO DESATIVADOS(COD_DESATIVADO, NOME_DESATIVADO, EMAIL_DESATIVADO, 
     SENHA_DESATIVADO,DATA_NASCIMENTO, TEMPO_DESATIVADO, MOTIVO_DESATIVADO)
@@ -36,7 +36,13 @@ mysql_query($sql2);
 echo "$mensagem às <b>$hora</b> do dia <b>$dia</b>";
 }
 echo "<meta charset=utf-8>";
-$mensagem = "Usuário $name Desativado";
+$busca = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
+$resultado = mysql_query($busca);
+$totalUsers = mysql_num_rows($resultado);
+$users = mysql_fetch_assoc($resultado);
+$sql = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users['ACAO_LOG'];   
+echo $resultado = mysql_query($sql);
+    $mensagem = "Usuário $name $resultado";
 salvaLog($mensagem,$name,$senha,$data,$code,$motivo,$email);
 ?>        
     </body>
