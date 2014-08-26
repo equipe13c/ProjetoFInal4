@@ -77,10 +77,11 @@
                 <div id="secao2">
                     <h1> Escreva-nos Sua Matéria </h1><br/><br/><br/>
                     <p> Você pode ajudar o site a crescer, escrevendo sua matéria.</p>
-                    <p> Nós avaliaremos seu texto e se gostarmos, você poderá ser chamando para trabalhar conosco, auxiliando no desenvolvimento dos artigos. </p>
+                    <p> Nós avaliaremos seu texto e se gostarmos, você poderá ser chamando para trabalhar conosco, auxiliando no desenvolvimento dos artigos. </p><br/><br/><br/>
                     <form action="" method="">
                         
                     </form>    
+                    <br/><br/><br/><br/><br/><br/>
                 </div>
                 <div id="coluna-lateral">
                     <div class="top"> 
@@ -117,12 +118,12 @@
                 <footer id="rodape">                    
                     <div class="links-rodape"> 
                             <h1> Multiplayer </h1>
+                            <a href="index.php"> Home </a> <br/>
                             <a href="quem_somos.php"> Quem Somos </a> <br/>
                             <a href="contato.php"> Contato </a> <br/>
                             <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="duvidas.php"> Dúvidas </a> <br/>  
-                            <a href="#"> Parcerias </a> <br/>
-                            <a href="#"> Mapa do Site </a> <br/>
+                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
+                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
                         </div>
                         <div class="links-rodape">
                             <h1> Plataformas </h1>

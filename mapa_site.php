@@ -75,7 +75,34 @@
                 </div>                
                 <article id="conteudo">    
                 <div id="secao2">
-                    Tire suas dúvidas
+                    <h1> Mapa do Site </h1><br/><br/>
+                    <p> Está perdido?!</p>
+                    <p> Esse é o Mapa do Site Multiplayer, aqui você encontra links e atalhos úteis para sua navegação.</p> <br/>
+                    <p> <a href="index.php"> Home </a> </p>
+                    <p> <a href="colunas.php"> Colunas </a> </p>
+                    <p> <a href="personagens.php"> Personagens </a> </p>
+                    <p> <a href="generos.php"> Gêneros </a> </p>
+                    <p> <a href="series.php">  Séries </a> </p>
+                    <p> <a href="ps3.php"> PlaySattion 3 </a> </p>
+                    <p> <a href="ps4.php"> PlaySattion 4 </a> </p>
+                    <p> <a href="wii.php"> Nintendo Wii </a> </p>
+                    <p> <a href="wii_u.php"> Nintendo Wii U </a> </p>
+                    <p> <a href="3ds.php"> Nintendo 3DS </a> </p>
+                    <p> <a href="xbox_360.php"> XBox 360 </a> </p>
+                    <p> <a href="xbox_one.php"> XBox One </a> </p>
+                    <p> <a href="pc.php"> PC </a> </p>
+                    <p> <a href="nintendinho.php"> Nintendinho </a> </p>
+                    <p> <a href="super_nintendo.php"> Super Nintendo </a> </p>
+                    <p> <a href="game_boy.php"> Game Boy </a> </p>
+                    <p> <a href="ps1.php"> PlayStation 1 </a> </p>                    
+                    <p> <a href="ps3.php"> PlayStation 2 </a> </p> 
+                    <p> <a href="login_user.php"> Login </a> </p>
+                    <p> <a href="cadastro.php"> Cadastro </a> </p> 
+                    <p> <a href="quem_somos.php"> Quem Somos </a> </p> 
+                    <p> <a href="contato.php"> Contato </a> </p>
+                    <p> <a href="escreva.php"> Escreva uma Matéria </a> </p>
+                    <p> <a href="termos_uso.php"> Termos de Uso </a> </p> 
+                    <br/><br/><br/><br/><br/><br/>
                 </div>
                 <div id="coluna-lateral">
                     <div class="top"> 
@@ -112,12 +139,12 @@
                 <footer id="rodape">                    
                     <div class="links-rodape"> 
                             <h1> Multiplayer </h1>
+                            <a href="index.php"> Home </a> <br/>
                             <a href="quem_somos.php"> Quem Somos </a> <br/>
                             <a href="contato.php"> Contato </a> <br/>
                             <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="duvidas.php"> Dúvidas </a> <br/>  
-                            <a href="#"> Parcerias </a> <br/>
-                            <a href="#"> Mapa do Site </a> <br/>
+                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
+                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
                         </div>
                         <div class="links-rodape">
                             <h1> Plataformas </h1>

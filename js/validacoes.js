@@ -60,35 +60,74 @@ function letrasNumeros(){
 }
 function validarData(campo){
 var expReg = /^(([0-2]\d|[3][0-1])\/([0]\d|[1][0-2])\/[1-2][0-9]\d{2})$/;
-var msgErro = 'Formato inválido de data.';
 if ((campo.value.match(expReg)) && (campo.value!='')){
 var dia = campo.value.substring(0,2);
 var mes = campo.value.substring(3,5);
 var ano = campo.value.substring(6,10);
 if(mes==4 || mes==6 || mes==9 || mes==11 && dia > 30){
-alert("Dia incorreto !!! O mês especificado contém no máximo 30 dias.");
+document.getElementById('msgData').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Data Inválido'> O mês contém no máximo 30 dias."; 
 campo.value="";
-return false;
 } else{
 if(ano%4!=0 && mes==2 && dia>28){
-alert("Data incorreta!! O mês especificado contém no máximo 28 dias.");
+document.getElementById('msgData').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Data Inválido'> Fevereiro tem 28 dias";
 campo.value="";
-return false;
 } else{
 if(ano%4==0 && mes==2 && dia>29){
-alert("Data incorreta!! O mês especificado contém no máximo 29 dias.");
+document.getElementById('msgData').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Data Inválido'> Fevereiro vai até dia 29";
 campo.value="";
-return false;
 }
 else{	
-return true;
+document.getElementById('msgData').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_valid.gif' alt='Data Válido'>";
 }}}} else {
-alert(msgErro);
-campo.value = "";
 campo.focus();
-return false;
+document.getElementById('msgData').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Data Inválido'> Data Inválida";
 }}
 function atualizarCaptcha(){
     var campo = document.getElementById("captcha2");
     campo.innerHTML = '<img src="captcha.php?l=180&a=50&tf=20&ql=6"id="captcha" >';
 }
+function validacaoEmail(field,idiv) { 
+    var email = document.getElementById('email').value;
+    var confirm = document.getElementById('confirmemail').value;
+
+    if(email == confirm){
+    usuario = field.value.substring(0, field.value.indexOf("@")); 
+    dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length); 
+    if ((usuario.length >=1) && (dominio.length >=3) && (usuario.search("@")==-1) && (dominio.search("@")==-1) && (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) && (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) 
+    { 
+    document.getElementById('msgemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_valid.gif' alt='E-mail Válido'>";
+    document.getElementById('msgConfirmemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_valid.gif' alt='E-mail Válido'>";} 
+    else{ 
+    document.getElementById('msgemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='E-mail Inválido'>E-mail Inválido";
+    document.getElementById('msgConfirmemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='E-mail Inválido'>E-mail Inválido";
+    } 
+    }
+    else{
+    document.getElementById('msgemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='E-mail Inválido'>E-mails Diferentes";
+    document.getElementById('msgConfirmemail').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='E-mail Inválido'>E-mails Diferentes";
+    alert("E-mails Diferentes");
+    confirm.focus();
+    }
+    
+} 
+function validaSenha(){
+    var senha = document.getElementById('senha').value;
+    var confirmsenha = document.getElementById('confirmsenha').value;
+    if((senha == '') && (confirmsenha == '')){
+    document.getElementById('msgSenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Senha Inválida'>Senha Inválida";
+    document.getElementById('msgConfirmsenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Senha Inválida'>Senha Inválida";
+    }
+    else{
+    if(senha == confirmsenha){
+    document.getElementById('msgSenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_valid.gif' alt='Senha Válida'>";
+    document.getElementById('msgConfirmsenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_valid.gif' alt='Senha Válida'>";    
+    }
+    else{
+    document.getElementById('msgSenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Senha Inválida'>Senhas Diferentes";
+    document.getElementById('msgConfirmsenha').innerHTML="&nbsp;&nbsp;<img src='imagens/ico_unvalid.gif' alt='Senha Inválida'>Senhas Diferentes";
+    alert("Senhas Diferentes");
+    confirmsenha.focus();
+        }
+    }
+}
+

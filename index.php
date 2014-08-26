@@ -56,7 +56,7 @@
                                     <li><a href="ps2.php"> Playstation 2 </a></li>
                                 </ul>
                             </li>
-                            <li><a href="login_cadastro.php"> Login </a>
+                            <li><a href="login_user.php"> Login </a>
                                 
                                 
                             </li>
@@ -93,8 +93,8 @@
                             </li>
                         </a>
                         <a href="materia_fifa_15_times_brasileiros.php">
-                            <li><span> 
-                            Saiba porque os times brasileiros foram deixados de lado em FIFA 15.
+                            <li><span><p> 
+                                        Saiba porque os times brasileiros foram deixados de lado em FIFA 15.</p>
                             </span>
                             <img src="imagens/galeria009.jpg" class="img-galeria">
                             </li>
@@ -119,11 +119,11 @@
                 <div id="coluna-lateral">
                     <div class="top"> 
                         <h1> Top Notícias </h1>
-                        <a href="noticia1.php" > Hyrule Warriors </a><br/> 
-                        <a href="noticia2.php" > Halo </a><br/>
-                        <a href="noticia3.php" > Call of Duty </a><br/>
-                        <a href="noticia4.php" > Skyrim </a><br/>
-                        <a href="noticia5.php" > Batman - Arkham Knight </a><br/>
+                        <a href="materia_rosto_tomb_raider.php" > Tomb Raider </a><br/> 
+                        <a href="materia_los_santos_gta_v.php" > GTA V </a><br/>
+                        <a href="materia_atualizacao_psvita.php" > PS Vita </a><br/>
+                        <a href="materia_7_bgs.php" > 7ª BGS </a><br/>
+                        <a href="materia_fifa_15_times_brasileiros.php" > FIFA 15 </a><br/>
                         <a href="noticia6.php" > InFamous </a><br/>
                         <a href="noticia7.php" > Tomb Raider </a><br/>
                         <a href="noticia8.php" > Super Smash Bros </a><br/>
@@ -143,7 +143,7 @@
                         <a href="jogo9.php" > Halo </a><br/>
                         <a href="jogo10.php" > Watch Dogs </a><br/>                    
                     </div><br/>
-                    <div class="top">
+                    <div id="propaganda2">
                         <h1> Propaganda 2 </h1>                    
                     </div>
                 </div>    
@@ -172,10 +172,10 @@
                             <img src="imagens/jogo009.jpg" class="img-materia">
                         </div> 
                     </a>
-                    <a href="materia_battlefield.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Battlefield </span>
-                            <img src="imagens/jogo005.jpg" class="img-materia">
+                    <a href="materia_los_santos_gta_v.php"> 
+                        <div class="ultima-materia"> 
+                            <span class="informacao-materia"> Los Santos de volta no GTA V. </span>
+                            <img src="imagens/jogo001.jpg" class="img-materia">
                         </div> 
                     </a>
                 </div>                
@@ -183,12 +183,12 @@
                 <footer id="rodape">                    
                     <div class="links-rodape"> 
                             <h1> Multiplayer </h1>
+                            <a href="index.php"> Home </a> <br/>
                             <a href="quem_somos.php"> Quem Somos </a> <br/>
                             <a href="contato.php"> Contato </a> <br/>
                             <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="duvidas.php"> Dúvidas </a> <br/>  
-                            <a href="#"> Parcerias </a> <br/>
-                            <a href="#"> Mapa do Site </a> <br/>
+                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
+                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
                         </div>
                         <div class="links-rodape">
                             <h1> Plataformas </h1>

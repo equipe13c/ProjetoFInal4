@@ -124,12 +124,12 @@
                 <footer id="rodape">                    
                     <div class="links-rodape"> 
                             <h1> Multiplayer </h1>
+                            <a href="index.php"> Home </a> <br/>
                             <a href="quem_somos.php"> Quem Somos </a> <br/>
                             <a href="contato.php"> Contato </a> <br/>
                             <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="duvidas.php"> Dúvidas </a> <br/>  
-                            <a href="#"> Parcerias </a> <br/>
-                            <a href="#"> Mapa do Site </a> <br/>
+                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
+                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
                         </div>
                         <div class="links-rodape">
                             <h1> Plataformas </h1>

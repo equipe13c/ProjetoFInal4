@@ -6,7 +6,7 @@
 body{
     width: 1000px;
     height: 100%;
-    background-color: darkgrey;
+    background-color: #DEDED9;
 }
 
 #secao, #container{    
@@ -15,7 +15,6 @@ body{
     left: 50%;
     margin-top: 0px;
     margin-left: -500px;
-    background-color: red;
     float: left;    
     position: absolute;
 }
@@ -31,14 +30,14 @@ body{
 #logo{
     width: 150px;
     height: 200px;
-    margin-top: 0px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
     float: left;
 }
 
 #img-logo{
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     margin-top: 0px;
     margin-left: 0px;
 }
@@ -76,7 +75,7 @@ body{
     text-decoration: none;  
     display: block;
     padding: 4.5px 6px;
-    margin-left: 16px;
+    margin-left: 20px;
     display: block;    
     font-size: 16px;
 }
@@ -92,7 +91,7 @@ body{
     display: none;
     padding: 0px 0px;
     line-height: 18pt;    
-    margin-left: 16px;
+    margin-left: 20px;
 } 
 
 .home li:hover ul, .menu li.over ul{
@@ -503,14 +502,14 @@ body{
     margin-left: 0px;
     margin-bottom: 50px;
     float: left;
-    background-color: white;
+    background-color: #fff;
 }
 
 #slideshow{
     width: 730px;
     height: 400px;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
     margin-bottom: 50px;
     float: left;
     border: solid 10px #333;
@@ -536,14 +535,14 @@ body{
 }
 
 #galeria ul li{
-    width: 730px;
+    width: 750px;
     height: 400px;
     display: inline-block;
     position: relative;
 }
 
 #galeria ul li span{
-    width: 740px;
+    width: 755px;
     height: 50px;
     display: table;
     background-color: #333;
@@ -555,6 +554,11 @@ body{
     font-size: 12pt;
     color: #fff;
 }
+
+#galeria ul li span p{
+    margin-left: 10px;
+}
+
 
 .img-galeria{
     width: 100%;
@@ -588,9 +592,10 @@ body{
 
 #coluna-lateral{
     width: 220px;
-    height: 1583px;
-    margin-top: 0px;
-    margin-right: 0px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     float: right;    
     text-align: center;
 }
@@ -605,7 +610,7 @@ body{
     background-color: #fff;
     border: solid 10px #333;
     font-family: century gothic;
-    line-height: 21pt;
+    line-height: 22pt;
     
 }
 
@@ -631,29 +636,39 @@ body{
 
 #propaganda2{
     width: 200px;
-    height: 344px;
+    height: 542px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    float: left;
+    background-color: #fff;
+    border: solid 10px #333;
+    font-family: century gothic;
+    line-height: 22pt;
 }
 
+#propaganda2 h1{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: century gothic;
+    font-size: 12pt;
+    background-color: #333;
+    color: #fff;
+}
+
+
 #materias{
-    width: 750px;
+    width: 770px;
     height: auto;
     margin-top: 0px;
     margin-left: 0px;
-    margin-bottom: -35px;
+    margin-bottom: 0px;
     float: left;  
     text-align: center;
+    background-color: #fff;
 }
 
 #materias2{
-    width: 750px;
-    height: auto;
-    margin-top: 0px;
-    margin-left: 0px;
-    float: left;  
-    text-align: center;
-}
-
-#secao2{
     width: 730px;
     height: auto;
     margin-top: 0px;
@@ -662,11 +677,32 @@ body{
     float: left;  
     text-align: center;
     background-color: #fff;
-    border: solid 10px #333; 
 }
 
-#secao2 img{
-    box-shadow: 0 0 0 10px #333;
+#materias2 h1{
+    font-family: century gothic;
+    color: #fff;
+    background-color: #333;
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 4px;
+}
+
+#materias2 a:hover{
+    opacity: 0.7;
+}
+
+
+#secao2{
+    width: 730px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    float: left; 
+    background-color: #fff;
+    border: solid 10px #333; 
 }
 
 #secao2 h1{
@@ -689,6 +725,16 @@ body{
     margin-right: 20px;
 }
 
+#secao2 p a{
+    color: #333;
+    text-decoration: none;
+}
+
+#secao2 p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
 #colunista{
     width: 730px;
     height: 200px;
@@ -707,6 +753,10 @@ body{
     margin-top: 25px;
     margin-left: 30px;
     background-color: #fff;
+}
+
+#img-colunista a:hover img{
+    opacity: 0.9;
 }
 
 #criador-materia{
@@ -731,9 +781,9 @@ body{
 .materias{
     width: 730px;
     height: 180px;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
     float: left;
     background-color: #fff;  
     border: solid 10px #333;
@@ -745,12 +795,16 @@ body{
     color: #fff;
 }
 
+#materias a:hover{
+    opacity: 0.7;
+}
+
 .ultima-materia{
     width: 730px;
     height: 180px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     float: left;
     background-color: #fff;  
     border: solid 10px #333;
@@ -795,9 +849,9 @@ body{
 #rodape{
     width: 981px;
     height: 250px;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-left: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     float: left;
     background-color: #8e8e8e; 
     text-align: center;

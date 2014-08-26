@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+RewriteRule ^([0-9A-Za-z-_]+)$ /$1.php
+</IfModule>

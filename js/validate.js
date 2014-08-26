@@ -1,17 +1,72 @@
-/*
- * js/jquery validation plug-in 1.6
- *
- * http://bassistance.de/js/jquery-plugins/js/jquery-plugin-validation/
- * http://docs.js/jquery.com/Plugins/Validation
- *
- * Copyright (c) 2006 - 2008 JÃ¶rn Zaefferer
- *
- * $Id: js/jquery.validate.js 6403 2009-06-17 14:27:16Z joern.zaefferer $
- *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
- */
+$(document).ready(function(){
+						 
+			    $('#cadastroForm').validate({
+			   
+					rules:{ 
+						email:{ 
+                                                    required: true,
+                                                    },//,
+                                                confirmemail:{
+                                                  required: true,
+                                                  equalTo: "#email"
+                                                },                                
+                                             senha:{ 
+                                                 required: true
+                                                 },
+                                              confirmsenha:{ 
+                                                 required: true,
+                                                 equalTo: "#senha"
+                                                 },
+                                               
+                                                    /*código meu*/
+                                             termos: "required"
+                                        /*fim código meu*/
+					},
+                                        
+                                      
+					messages:{
+						email:{ 
+                                                     required: 'Este Campo &eacute; obrigat&oacute;rio' , 
+                                                     remote: '<font color="red">Este Login j&aacute; est&aacute; em uso.</font>'},//,
+                                                confirmemail:{
+                                                       required: "O campo confirmação de email é obrigatorio.",
+                                                       equalTo: '<font color="red">O campo confirmação de email deve ser identico ao campo email.</font>'
+                                                     },
+                                                senha:{ 
+                                                       required: 'Este Campo &eacute; obrigat&oacute;rio' 
+                                                      },
+                                                confirmsenha:
+                                                      { 
+                                                         required: 'Este Campo &eacute; obrigat&oacute;rio', 
+                                                         equalTo:  '<font color="red">O campo confirmação de senha deve ser identico ao campo senha.</font>'
+                                                      },
+					         termos: "Para se cadastrar você deve aceitar os termos de uso."
+                                              }
+					});
+			
+                                    });
+			
+			
+					
+					window.onload = function() {
+					
+                    // $('#login').keypress function(){alert("");});
+					  
+                       $("#email").keypress(function() {
+
+					     $('div.loader').show();
+                     });
+									
+                       $("#email").focusout(function() {
+
+					     $('div.loader').hide();
+                     });									
+					 $("#email").keyup(function() {
+                       $('div.loader').hide();
+                     });
+			}
+
+
 
 (function($) {
 
@@ -1074,10 +1129,6 @@ $.extend($.validator, {
 $.format = $.validator.format;
 
 })(js/jquery);
-
-// ajax mode: abort
-// usage: $.ajax({ mode: "abort"[, port: "uniqueport"]});
-// if mode:"abort" is used, the previous request on that port (port can be undefined) is aborted via XMLHttpRequest.abort() 
 ;(function($) {
 	var ajax = $.ajax;
 	var pendingRequests = {};
@@ -1094,14 +1145,6 @@ $.format = $.validator.format;
 		return ajax.apply(this, arguments);
 	};
 })(js/jquery);
-
-// provides cross-browser focusin and focusout events
-// IE has native support, in other browsers, use event caputuring (neither bubbles)
-
-// provides delegate(type: String, delegate: Selector, handler: Callback) plugin for easier event delegation
-// handler is only called when $(event.target).is(delegate), in the scope of the js/jquery-object for event.target 
-
-// provides triggerEvent(type: String, target: Element) to trigger delegated events
 ;(function($) {
 	$.each({
 		focus: 'focusin',

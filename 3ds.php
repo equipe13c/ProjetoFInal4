@@ -74,48 +74,36 @@
                 </div>                
                 <article id="conteudo">    
                 <div id="materias2">
-                    <a href="materia_gta_v.php"> 
+                    <a href="#"> 
                         <div class="materias"> 
-                            <span class="informacao-materia"> Conheça GTA V </span> 
-                            <img src="imagens/jogo001.jpg" class="img-materia">
+                            <span class="informacao-materia"> Mario 3D Land </span> 
+                            <img src="imagens/jogo030.jpg" class="img-materia">
                         </div> 
                     </a>
-                    <a href="materia_mario_kart_8.php"> 
+                    <a href="#"> 
                         <div class="materias"> 
-                            <span class="informacao-materia"> Novo Mario Kart 8 </span>
-                            <img src="imagens/jogo002.jpg" class="img-materia">
+                            <span class="informacao-materia"> Pokémon X e Y </span>
+                            <img src="imagens/jogo033.jpeg" class="img-materia">
                         </div> 
                     </a>
-                    <a href="materia_last_of_us_remastered.php"> 
+                    <a href="#"> 
                         <div class="materias">
-                            <span class="informacao-materia"> Last of Us - Remastered </span>
-                            <img src="imagens/jogo003.jpg" class="img-materia">
+                            <span class="informacao-materia">  Legend of Zelda - Ocarina Of Time 3D </span>
+                            <img src="imagens/jogo034.jpg" class="img-materia">
                         </div> 
                     </a>
-                    <a href="materia_assassins_creed.php"> 
+                    <a href="#"> 
                         <div class="materias"> 
-                            <span class="informacao-materia"> Saga Assassin's Creed </span>
-                            <img src="imagens/jogo004.png" class="img-materia">
+                            <span class="informacao-materia">  Luigi's Mansion - Dark Moon </span>
+                            <img src="imagens/jogo035.png" class="img-materia">
                         </div> 
                     </a>
-                    <a href="materia_battlefield.php"> 
+                    <a href="#"> 
                         <div class="materias"> 
-                            <span class="informacao-materia"> Battlefield </span>
-                            <img src="imagens/jogo005.jpg" class="img-materia">
+                            <span class="informacao-materia">  New Super Mario Bros 2 </span>
+                            <img src="imagens/jogo036.jpg" class="img-materia">
                         </div> 
-                    </a>    
-                    <a href="materia_battlefield.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Ryse - Son of Rome </span>
-                            <img src="imagens/jogo006.jpg" class="img-materia">
-                        </div> 
-                    </a>
-                    <a href="materia_battlefield.php"> 
-                        <div class="ultima-materia"> 
-                            <span class="informacao-materia"> Far Cry 4 </span>
-                            <img src="imagens/jogo007.jpg" class="img-materia">
-                        </div> 
-                    </a>
+                    </a>                        
                 </div>
                 <div id="coluna-lateral">
                     <div class="top"> 
@@ -152,12 +140,12 @@
                 <footer id="rodape">                    
                     <div class="links-rodape"> 
                             <h1> Multiplayer </h1>
+                            <a href="index.php"> Home </a> <br/>
                             <a href="quem_somos.php"> Quem Somos </a> <br/>
                             <a href="contato.php"> Contato </a> <br/>
                             <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="duvidas.php"> Dúvidas </a> <br/>  
-                            <a href="#"> Parcerias </a> <br/>
-                            <a href="#"> Mapa do Site </a> <br/>
+                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
+                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
                         </div>
                         <div class="links-rodape">
                             <h1> Plataformas </h1>
