@@ -34,7 +34,7 @@ function verificarBotaoUser($tipoUser){
         echo "<td><input type='submit' class=botoes name='desativar' value='Desativar'></td>";
 }
     else if($tipoUser == "3"){
-        echo "<td><input type='submit' class=botoes name='desativar' value='Desativar'></td>";
+        echo "<td><input type='submit' class=botoes name='alterarTipo' value='Alterar Tipo'></td>";
 }
     else if($tipoUser == '4'){
         echo "<td><input type='submit' class=botoes name='reativar' value='Reativar'></td>";

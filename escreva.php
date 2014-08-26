@@ -4,6 +4,7 @@
         <title> Multiplayer </title>
         <meta http-equiv="Content-Type" charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
+        <link rel="shortcut icon" href="imagens/icone001.png" >
         <script type="text/javascript" src="js/jquery.js"> </script> 
         <script type="text/javascript" src="js/javascript.js"> </script> 
         <script type="text/javascript" src="js/slide.js"> </script>
@@ -22,144 +23,148 @@
                             <li><a href="index.php"> Home </a></li>
                             <li><a href="colunas.php"> Colunas </a>
                                 <ul class="submenu-home">
-                                    <li><a href="#"> Personagens </a></li>
-                                    <li><a href="#"> Gêneros </a></li>
-                                    <li><a href="#"> Séries </a></li>
+                                    <li><a href="personagens.php"> Personagens </a></li>
+                                    <li><a href="generos.php"> Gêneros </a></li>
+                                    <li><a href="series.php"> Séries </a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"> Playstation </a>
+                            <li><a href="ps3.php"> Playstation </a>
                                 <ul class="submenu-home"> 
                                     <li><a href="ps3.php"> PS3 </a></li>
                                     <li><a href="ps4.php"> PS4 </a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"> Nintendo </a>
+                            <li><a href="wii.php"> Nintendo </a>
                                 <ul class="submenu-home"> 
                                     <li><a href="wii.php"> Nintendo Wii </a></li>
                                     <li><a href="wii_u.php"> Nintendo Wii U </a></li>
-                                    <li><a href="#.php"> Nintendo 3DS </a></li>
+                                    <li><a href="3ds.php"> Nintendo 3DS </a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"> XBOX </a>
+                            <li><a href="xbox_360.php"> XBOX </a>
                                 <ul class="submenu-home"> 
                                     <li><a href="xbox_360.php"> XBOX 360 </a></li>
                                     <li><a href="xbox_one.php"> XBOX ONE </a></li>
                                 </ul>
                             </li>
                             <li><a href="pc.php"> PC </a></li>
-                            <li><a href="#"> Outras Plataformas </a>
+                            <li><a href="ps2.php"> Outras Plataformas </a>
                                 <ul class="submenu-home"> 
-                                    <li><a href="#"> Nintendinho </a></li>
-                                    <li><a href="#"> Super Nintendo </a></li>
-                                    <li><a href="#"> GameBoy </a></li>
-                                    <li><a href="#"> Playstation 1 </a></li>
-                                    <li><a href="#"> Playstation 2 </a></li>
+                                    <li><a href="nintendinho.php"> Nintendinho </a></li>
+                                    <li><a href="super_nintendo.php"> Super Nintendo </a></li>
+                                    <li><a href="game_boy.php"> GameBoy </a></li>
+                                    <li><a href="ps1.php"> Playstation 1 </a></li>
+                                    <li><a href="ps2.php"> Playstation 2 </a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"> Login </a>
+                            <li><a href="login_cadastro.php"> Login </a>
                                 <ul class="submenu-home">
-                                    <li><a href="login_user.php"> Login </a></li>
-                                    <li><a href="login_user.php"> Cadastro </a>
+                                    <li><a href="login_cadastro.php"> Login </a></li>
+                                    <li><a href="login_cadastro.php"> Cadastro </a>
                                 </ul>    
                             </li>
                         </ul>
                     </nav>
-                    <div id="propaganda1"><a href="#"><img src="imagens/propaganda.jpg" alt="" id="img-propaganda1" > </a></div>
+                    <div id="propaganda1">
+                        <iframe src="http://www.brasilgameshow.com.br/publico/contador-horizontal.php" style="width: 544px; height: 100px; display: block; margin: 0 auto; border: none; overflow: hidden;"></iframe>
+                    </div>
                 </header>        
                 <div id="busca"> 
                     <input type="text" placeholder="Buscar" id="caixa-busca" /> 
                     <a href="busca.php"> <img src="imagens/lupa.jpg" alt="" id="lupa"> </a>
+                </div>                
+                <article id="conteudo">    
+                <div id="secao2">
+                    <h1> Escreva-nos Sua Matéria </h1><br/><br/><br/>
+                    <p> Você pode ajudar o site a crescer, escrevendo sua matéria.</p>
+                    <p> Nós avaliaremos seu texto e se gostarmos, você poderá ser chamando para trabalhar conosco, auxiliando no desenvolvimento dos artigos. </p>
+                    <form action="" method="">
+                        
+                    </form>    
                 </div>
-                <article id="conteudo">
-                    <div id="materia">
-                        Envie-nos sua matéria
-                        
-                        <form name="materia" action="" id="EnviarMateria" method="post" onSubmit="return validar();"> 
-                            <label class="stringmateria"> Nome </label><input type="text" class="txtsmateria" name="nome" placeholder="Nome de Acesso"/> <br/><br/>
-                            <label class="stringmateria">Email </label><input type="email" class="txtsmateria" name="email" id="email" placeholder="Digite seu E-mail"/> <br/><br/>
-                            <label class="stringmateria"> Data de nascimento </label><input type="date" class="txtsmateria" name="data" placeholder="Data"/> <br/><br/>
-                            <label class="stringmateria"> Conteúdo: </label> <br/><br/> 
-                            <textarea name="comentarios" rows="10" cols="20" onLoad="vigiaTextarea();"  class="stringmateria"></textarea> <br/><br/>
-                            <input class="botoes" type="reset" name="limpar" value="Limpar"/>
-                           <input  class="botoes" type="submit" name="enviar" value="Enviar"/>
-                        </form>
-                        
-                    </div>
-                    <div id="coluna-lateral">
-                    <div class="top"> Top Notícias 
-                        <br/>
-                        <a href="#" > Notícia 1 </a><br/> 
-                        <a href="#" > Notícia 2 </a><br/>
-                        <a href="#" > Notícia 3 </a><br/>
-                        <a href="#" > Notícia 4 </a><br/>
-                        <a href="#" > Notícia 5 </a><br/>
-                        <a href="#" > Notícia 6 </a><br/>
-                        <a href="#" > Notícia 7 </a><br/>
-                        <a href="#" > Notícia 8 </a><br/>
-                        <a href="#" > Notícia 9 </a><br/>
-                        <a href="#" > Notícia 10 </a><br/>
+                <div id="coluna-lateral">
+                    <div class="top"> 
+                        <h1> Top Notícias </h1>
+                        <a href="noticia1.php" > Hyrule Warriors </a><br/> 
+                        <a href="noticia2.php" > Halo </a><br/>
+                        <a href="noticia3.php" > Call of Duty </a><br/>
+                        <a href="noticia4.php" > Skyrim </a><br/>
+                        <a href="noticia5.php" > Batman - Arkham Knight </a><br/>
+                        <a href="noticia6.php" > InFamous </a><br/>
+                        <a href="noticia7.php" > Tomb Raider </a><br/>
+                        <a href="noticia8.php" > Super Smash Bros </a><br/>
+                        <a href="noticia9.php" > Alien Isolation </a><br/>
+                        <a href="noticia10.php" > Far Cry 4 </a><br/>
                     </div><br/>
-                    <div class="top"> Top Jogos 
-                        <br/>
-                        <a href="#" > Jogo 1 </a><br/> 
-                        <a href="#" > Jogo 2 </a><br/>
-                        <a href="#" > Jogo 3 </a><br/>
-                        <a href="#" > Jogo 4 </a><br/>
-                        <a href="#" > Jogo 5 </a><br/>
-                        <a href="#" > Jogo 6 </a><br/>
-                        <a href="#" > Jogo 7 </a><br/>
-                        <a href="#" > Jogo 8 </a><br/>
-                        <a href="#" > Jogo 9 </a><br/>
-                        <a href="#" > Jogo 10 </a><br/>                    
+                    <div class="top"> 
+                        <h1> Top Jogos </h1>
+                        <a href="jogo1.php" > Assassin's Creed Unity </a><br/> 
+                        <a href="jogo2.php" > FIFA 15 </a><br/>
+                        <a href="jogo3.php" > Infamous: First Light </a><br/>
+                        <a href="jogo4.php" > Rainbow Six Siege </a><br/>
+                        <a href="jogo5.php" > Metal Gear Solid V </a><br/>
+                        <a href="jogo6.php" > Silent Hill </a><br/>
+                        <a href="jogo7.php" > Byonetta 2 </a><br/>
+                        <a href="jogo8.php" > Sonic Boom </a><br/>
+                        <a href="jogo9.php" > Halo </a><br/>
+                        <a href="jogo10.php" > Watch Dogs </a><br/>                    
                     </div><br/>
                     <div class="top">
-                        <img src="imagens/propaganda2.jpg" id="propaganda2">                    
+                        <h1> Propaganda 2 </h1>                    
                     </div>
                 </div>
                 </article>                
-                <footer id="rodape"> 
-                    <div id="informacao">
-                        <a href="quem_somos.php"> <div id="quem-somos"> Quem somos </div> </a>
-                        <a href="contato.php"> <div id="contato"> Contato </div> </a>
-                        <a href="escreva.php"> <div id="escreva"> Escreva uma Matéria </div> </a>
-                        <a href="duvidas.php"> <div id="duvidas"> Dúvidas </div> </a>
-                    </div>
-                    <div id="outros-links">
-                        <div id="colunas-rodape"> 
-                            Colunas <br/>
-                            <a href="colunas.php"> Coluna 1 </a> <br/>
-                            <a href="colunas.php"> Coluna 2 </a> <br/>
-                            <a href="colunas.php"> Coluna 3 </a> <br/>
-                            <a href="colunas.php"> Coluna 4 </a> <br/>                            
+                <footer id="rodape">                    
+                    <div class="links-rodape"> 
+                            <h1> Multiplayer </h1>
+                            <a href="quem_somos.php"> Quem Somos </a> <br/>
+                            <a href="contato.php"> Contato </a> <br/>
+                            <a href="escreva.php"> Escreva uma Matéria </a> <br/>
+                            <a href="duvidas.php"> Dúvidas </a> <br/>  
+                            <a href="#"> Parcerias </a> <br/>
+                            <a href="#"> Mapa do Site </a> <br/>
                         </div>
-                        <div id="plataformas"> 
-                            Plataformas <br/>
+                        <div class="links-rodape">
+                            <h1> Plataformas </h1>
                             <a href="ps3.php"> PS3 </a> <br/>
                             <a href="pc.php"> PC </a> <br/>
                             <a href="wii.php"> Wii </a> <br/>
-                            <a href="xbox_360.php"> Xbox 360 </a> <br/>                            
+                            <a href="xbox_360.php"> Xbox 360 </a> <br/>  
+                            <a href="ps4.php"> PS4 </a> <br/>
+                            <a href="3ds.php"> 3DS </a> <br/>
+                            <a href="xbox_one.php.php"> Xbox One </a> <br/>
+                            <a href="ps4.php"> PS4 </a> <br/>
                         </div>
-                        <div id="series"> 
-                            Séries <br/>
-                            <a href="#"> Série 1 </a> <br/>
-                            <a href="#"> Série 2 </a> <br/>
-                            <a href="#"> Série 3 </a> <br/>
-                            <a href="#"> Série 4 </a> <br/>
+                        <div class="links-rodape">
+                            <h1> Séries </h1>
+                            <a href="serie_mario.php"> Mario </a> <br/>
+                            <a href="serie_batman.php"> Batman </a> <br/>
+                            <a href="serie_mortal_kombat.php"> Mortal Kombat </a> <br/>
+                            <a href="serie_god_of_war.php"> God of War </a> <br/>
+                            <a href="serie_bioshock.php"> Bioshock </a> <br/>
+                            <a href="serie_the_sims.php"> The Sims </a> <br/>
+                            <a href="serie_legend_of_zelda.php"> Legend of Zelda </a> <br/>
+                            <a href="serie_pokemon.php"> Pokémon </a> <br/>
                         </div>
-                        <div id="generos"> 
-                            Gêneros <br/>
-                            <a href="#"> Gênero 1 </a> <br/>
-                            <a href="#"> Gênero 2 </a> <br/>
-                            <a href="#"> Gênero 3 </a> <br/>
-                            <a href="#"> Gênero 4 </a> <br/>
+                        <div class="links-rodape">
+                            <h1> Gêneros </h1>
+                            <a href="genero1.php"> Ação </a> <br/>
+                            <a href="genero2.php"> FPS </a> <br/>
+                            <a href="genero3.php"> Corrida </a> <br/>
+                            <a href="genero4.php"> Terror </a> <br/>
+                            <a href="genero4.php"> Plataforma </a> <br/>
+                            <a href="genero4.php"> RPG </a> <br/>
+                            <a href="genero4.php"> Aventura </a> <br/>
+                            <a href="genero4.php"> Casual </a> <br/>
                         </div>
-                    </div>
-                    <div id="forum"> 
-                        Conheça nosso Fórum <br/>
-                        <a href="forum.php"> Pergunta 1 </a> <br/>
-                        <a href="forum.php"> Pergunta 2 </a> <br/>
-                        <a href="forum.php"> Pergunta 3 </a> <br/>
-                        <a href="forum.php"> Pergunta 4 </a> <br/>                        
+                        <div id="propaganda3">
+                            <iframe src="http://www.brasilgameshow.com.br/publico/contador.php" style="width: 224px; height: 210px; display: block; margin: 0 auto; border: none; overflow: hidden;">
+                                
+                            </iframe>
+
+                        </div>
+                    <div id="logo-empresa">
+                        <img src="imagens/logoempresa.png" alt="" id="img-logo-empresa">
                     </div>
                 </footer>
                 </section>

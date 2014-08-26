@@ -11,13 +11,7 @@ function salvaLog($mensagem) {
         VALUES('$ip','$dia', '$hora', '$mensagem', '$acao','".$_SESSION['email']."',".$_SESSION['code'].")";
         mysql_query($sql);
         }
-        $busca2 = "SELECT * FROM LOG WHERE AUTOR_LOG='".$_SESSION['email']."'";
-        $resultado2 = mysql_query($busca2);
-        $totalUsers2 = mysql_num_rows($resultado2);
-        $users2 = mysql_fetch_assoc($resultado2);
-        $sql2 = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users2['ACAO_LOG'];   
-        $resultado3 = mysql_query($sql2);
-        $mensagem = "Usuário ".$_SESSION['nome']." $resultado3"; 
+        $mensagem = "Usuário ".$_SESSION['nome'] . "Efeutou Logout";
         salvaLog($mensagem);
 session_destroy();
 echo '<script>

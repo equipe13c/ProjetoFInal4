@@ -1,0 +1,51 @@
+root { 
+    display: block;
+}
+#backPerfil{
+    width:200px;
+    float:left;
+    display:block;
+}
+#backIframe{
+    float:left;
+    width:1050px;
+    height:550px;    
+}
+#tela{
+    width:1050px;
+    height:550px;
+    float:left;
+    margin-left:0px;
+    margin-top:0px;
+    border:0px;
+    overflow: hidden;
+}
+.txtsAlterarDados{
+    float:right;
+}
+#frmAlterarDados{
+    width:370px;
+}
+.stringAlterarDados{
+    line-height: 20pt;
+}
+#frmlistarUser{
+    width:200px;
+}
+#frmNovaMateria{
+    width:370px;
+}
+.stringNovaMateria{
+    line-height: 20pt;
+}
+.txtsNovaMateria{
+    float:right;
+}
+
+.listaMateria{
+    width:670px;
+    height: 700px;
+   margin-left:420px;
+    background-color: red;
+    
+}

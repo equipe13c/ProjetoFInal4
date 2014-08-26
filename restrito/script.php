@@ -53,13 +53,7 @@ VALUES('$ip','$dia', '$hora', '$mensagem', 7,'".$_SESSION['email']."',".$_SESSIO
 mysql_query($sql3);
 if(mysql_query($sql)){
     echo "Imagem Atualizada";
-        $busca = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-        $resultado = mysql_query($busca);
-        $totalUsers = mysql_num_rows($resultado);
-        $users = mysql_fetch_assoc($resultado);
-        $sql = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users['ACAO_LOG'];   
-        $resultado = mysql_query($sql);
-    $mensagem = "Usuário $name $resultado";
+    $mensagem = "Usuário $name";
     salvaLog($mensagem,$name,$code,$motivo,$email);
     echo "<a href=index.php>Voltar</a>";
 }

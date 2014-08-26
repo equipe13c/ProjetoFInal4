@@ -41,17 +41,22 @@ else{
         VALUES('$ip','$dia', '$hora', '$mensagem', 1,'".$_SESSION['email']."',".$_SESSION['code'].")";
         mysql_query($sql);
         }
+        if($tipoUSUARIO === '3'){
+            $mensagem = "Usuário ". $_SESSION['nome'] . "Efetuo Login";
+            salvaLog($mensagem,$email);
+            echo "Login Efetuado, Usuário Colunista Aguarde...";
+            echo '<script>setTimeout("window.location='. "'" ."colunista/index.php'" . '", 2000);</script>';
+    }
         if($tipoUSUARIO === '2'){
-            $mensagem = "Usuário ". $_SESSION['nome'] . $resultado;
-            salvaLog($mensagem,$name,$senha,$data,$code,$motivo,$email);
+            $mensagem = "Usuário ". $_SESSION['nome'] . "Efetuo Login";
+            salvaLog($mensagem,$email);
             echo "Login Efetuado, Usuário Restrito Aguarde...";
             echo '<script>setTimeout("window.location='. "'" ."restrito/index.php'" . '", 2000);</script>';
-            
     }
     else if($tipoUSUARIO === '1'){
-            $mensagem = "Usuário " . $_SESSION['nome'] . $resultado;
+            $mensagem = "Usuário " . $_SESSION['nome'] . "Efetuo Login";
             salvaLog($mensagem,$email);
-            echo "Login Efetuado, ADM". $_SESSION['nome']." Aguarde...";
+            echo "Login Efetuado, ADM ". $_SESSION['nome']." Aguarde...";
             echo '<script>setTimeout("window.location='. "'" ."admin/index.php'" . '", 2000);</script>';
     }
     else{

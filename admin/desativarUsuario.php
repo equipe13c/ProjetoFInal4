@@ -36,13 +36,8 @@ mysql_query($sql2);
 echo "$mensagem às <b>$hora</b> do dia <b>$dia</b>";
 }
 echo "<meta charset=utf-8>";
-$busca = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-$resultado = mysql_query($busca);
-$totalUsers = mysql_num_rows($resultado);
-$users = mysql_fetch_assoc($resultado);
-$sql = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users['ACAO_LOG'];   
-echo $resultado = mysql_query($sql);
-    $mensagem = "Usuário $name $resultado";
+
+    $mensagem = "Usuário $name Desativado";
 salvaLog($mensagem,$name,$senha,$data,$code,$motivo,$email);
 ?>        
     </body>

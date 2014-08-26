@@ -20,34 +20,27 @@ $senha = $_POST['password'];
 $code = $_POST['cod_user'];
 $tipo = $_POST['tipo'];
 
-        function salvaLog($mensagem,$name,$code,$motivo,$email) {
+        function salvaLog($mensagem) {
         $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
         $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
         $dia = date('Y-m-d');
         $sql = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
         VALUES('$ip','$dia', '$hora', '$mensagem', 6,'".$_SESSION['email']."',".$_SESSION['code'].")";
         mysql_query($sql);
+        $sql3 = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
+        VALUES('$ip','$dia', '$hora', '$mensagem', 8,'".$_SESSION['email']."',".$_SESSION['code'].")";
+        mysql_query($sql3);
         $sql2 = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
         VALUES('$ip','$dia', '$hora', '$mensagem', 7,'".$_SESSION['email']."',".$_SESSION['code'].")";
         mysql_query($sql2);
-        $sql3 = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
-        VALUES('$ip','$dia', '$hora', '$mensagem', 7,'".$_SESSION['email']."',".$_SESSION['code'].")";
-        mysql_query($sql3);
-        echo $mensagem;
         }
 
         
 $sql = "UPDATE USUARIO SET NOME_USUARIO = '$name', EMAIL_USUARIO = '$email', SENHA_USUARIO = '$senha' WHERE COD_USUARIO = $code";
   if(mysql_query($sql)){
     echo "Dados Atualizados<br/>";
-        $busca = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-        $resultado = mysql_query($busca);
-        $totalUsers = mysql_num_rows($resultado);
-        $users = mysql_fetch_assoc($resultado);
-        $sql = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users['ACAO_LOG'];   
-        $resultado = mysql_query($sql);
-    $mensagem = "Usuário $name $resultado";
-    salvaLog($mensagem,$name,$code,$motivo,$email);
+    $mensagem = "Usuário $name";
+    salvaLog($mensagem);
 }
 else{
     echo "Erro Ao Atualizar Dados";
@@ -95,20 +88,10 @@ $salt = geraSaltAleatorio();
 }
 $nome = $nome_final;
 $sql = "UPDATE IMAGEM_USUARIO SET URL_IMAGEM = '$nome' WHERE COD_IMAGEM_USUARIO =" . $code;
-$sql3 = "INSERT INTO LOG(IP_LOG, DATA_LOG, HORA_LOG, MENSAGEM_LOG, ACAO_LOG,AUTOR_LOG,COD_AUTOR_LOG)
-        VALUES('$ip','$dia', '$hora', '$mensagem', 7,'".$_SESSION['email']."',".$_SESSION['code'].")";
-mysql_query($sql3);
-
 if(mysql_query($sql)){
     echo "Imagem Atualizada<br/>";
     echo "<a href=listar.php?tipoUser=$tipo>Voltar</a>";
-        $busca = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-        $resultado = mysql_query($busca);
-        $totalUsers = mysql_num_rows($resultado);
-        $users = mysql_fetch_assoc($resultado);
-        $sql = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users['ACAO_LOG'];   
-        $resultado = mysql_query($sql);
-    $mensagem = "Usuário $name $resultado";
+    $mensagem = "Usuário $name";
     salvaLog($mensagem,$name,$code,$motivo,$email);
     
 }

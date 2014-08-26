@@ -4,9 +4,9 @@
         <title> Multiplayer </title>
         <meta http-equiv="Content-Type" charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
+        <link rel="shortcut icon" href="imagens/icone001.png" >
         <script type="text/javascript" src="js/jquery.js"> </script> 
-        <script type="text/javascript" src="js/javascript.js"> </script> 
-        <script type="text/javascript" src="js/slide.js"> </script>
+        <script type="text/javascript" src="js/javascript.js"> </script>
         <script type="text/javascript" src="js/jquery.min.js"> </script>
     </head>
     <body>
@@ -47,31 +47,30 @@
                                 </ul>
                             </li>
                             <li><a href="pc.php"> PC </a></li>
-                            <li><a href="ps2"> Outras Plataformas </a>
+                            <li><a href="ps2.php"> Outras Plataformas </a>
                                 <ul class="submenu-home"> 
                                     <li><a href="nintendinho.php"> Nintendinho </a></li>
                                     <li><a href="super_nintendo.php"> Super Nintendo </a></li>
-                                    <li><a href="gameboy.php"> GameBoy </a></li>
+                                    <li><a href="game_boy.php"> GameBoy </a></li>
                                     <li><a href="ps1.php"> Playstation 1 </a></li>
                                     <li><a href="ps2.php"> Playstation 2 </a></li>
                                 </ul>
                             </li>
-                            <li><a href="login_user.php"> Login </a>
-                                <ul class="submenu-home">
-                                    <li><a href="login_user.php"> Login </a></li>
-                                    <li><a href="login_user.php"> Cadastro </a>
-                                </ul>    
+                            <li><a href="login_cadastro.php"> Login </a>
+                                
+                                
                             </li>
                         </ul>
                     </nav>
                     <div id="propaganda1">
-                        <h1> Propaganda 1 </h1>
+                        <iframe src="http://www.brasilgameshow.com.br/publico/contador-horizontal.php" style="width: 544px; height: 100px; display: block; margin: 0 auto; border: none; overflow: hidden;"></iframe> 
                     </div>
                 </header>        
                 <div id="busca"> 
                     <input type="text" placeholder="Buscar" id="caixa-busca" /> 
                     <a href="busca.php"> <img src="imagens/lupa.jpg" alt="" id="lupa"> </a>
-                </div>
+                </div>                
+                <article id="conteudo">
                 <div id="slideshow">
                 <div id="galeria">
                     <div id="buttons">
@@ -79,90 +78,48 @@
                         <a href="#" class="next"> &raquo; </a>
                     </div>
                     <ul> 
-                        <li><span> 
-                            Nintendo
+                        <a href="materia_rosto_tomb_raider.php">
+                            <li><span> 
+                            Conheça a Tecnologia por trás de Rise of The Tomb Raider.
                             </span>
-                            <img src="imagens/1.jpeg" id="img1">
-                        </li>
-                        <li><span> 
-                            Super Nintendo
+                            <img src="imagens/galeria007.jpg" class="img-galeria">
+                            </li>
+                        </a>
+                        <a href="materia_7_bgs.php">
+                            <li><span> 
+                            BGS - 7ª Edição vem em outubro. Já comprou seu ingresso?
                             </span>
-                            <img src="imagens/2.jpeg" id="img2">
-                        </li>
-                        <li><span> 
-                            Nintendo 64
+                            <img src="imagens/galeria008.jpg" class="img-galeria">
+                            </li>
+                        </a>
+                        <a href="materia_fifa_15_times_brasileiros.php">
+                            <li><span> 
+                            Saiba porque os times brasileiros foram deixados de lado em FIFA 15.
                             </span>
-                            <img src="imagens/3.jpeg" id="img3">
-                        </li>
-                        <li><span> 
-                            Game Cube 
+                            <img src="imagens/galeria009.jpg" class="img-galeria">
+                            </li>
+                        </a>
+                        <a href="materia_atualizacao_psvita.php">
+                            <li><span> 
+                            Atualização do PS Vita. 
                             </span>
-                            <img src="imagens/4.jpeg" id="img4">
-                        </li>
-                        <li><span> 
-                            Wii
+                            <img src="imagens/galeria010.jpg" class="img-galeria">
+                            </li>
+                        </a>
+                        <a href="materia_los_santos_gta_v.php">
+                            <li><span> 
+                            Los Santos de volta no GTA V.
                             </span>
-                            <img src="imagens/5.jpeg" id="img5">
-                        </li>
+                            <img src="imagens/galeria011.jpg" class="img-galeria">
+                            </li>
+                        </a>
                     </ul>
                 </div>
-                    <div id="imagens-galeria1">
-                        <a href="#img1">
-                            <img src="imagens/1.jpeg" class="imagens-galeria1">
-                        </a>
-                        <a href="#img2">
-                            <img src="imagens/2.jpeg" class="imagens-galeria1">
-                        </a>
-                    </div>
-                    <div id="imagens-galeria2">
-                        <a href="#img3">
-                            <img src="imagens/3.jpeg" class="imagens-galeria2">
-                        </a>
-                        <a href="#img4">
-                            <img src="imagens/4.jpeg" class="imagens-galeria2">
-                        </a>
-                        <a href="#img5">
-                            <img src="imagens/5.jpeg" class="imagens-galeria2">
-                        </a>
-                    </div>
-                </div>
-                <article id="conteudo">    
-                <div id="materias">
-                    <a href="materia_gta_v.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Conheça GTA V </span> 
-                            <img src="imagens/jogo-01.jpg" class="img-materia">
-                        </div> 
-                    </a>
-                    <a href="materia_mario_kart_8.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Novo Mario Kart 8 </span>
-                            <img src="imagens/jogo-02.jpg" class="img-materia">
-                        </div> 
-                    </a>
-                    <a href="materia_last_of_us_remastered.php"> 
-                        <div class="materias">
-                            <span class="informacao-materia"> Last of Us - Remastered </span>
-                            <img src="imagens/jogo-03.jpg" class="img-materia">
-                        </div> 
-                    </a>
-                    <a href="materia_assassins_creed.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Saga Assassin's Creed </span>
-                            <img src="imagens/jogo-04.png" class="img-materia">
-                        </div> 
-                    </a>
-                    <a href="materia_battlefield.php"> 
-                        <div class="materias"> 
-                            <span class="informacao-materia"> Battlefield </span>
-                            <img src="imagens/jogo-05.jpg" class="img-materia">
-                        </div> 
-                    </a>                   
                 </div>
                 <div id="coluna-lateral">
                     <div class="top"> 
                         <h1> Top Notícias </h1>
-                        <a href="noticia1.php" > Hhyrule Warriors </a><br/> 
+                        <a href="noticia1.php" > Hyrule Warriors </a><br/> 
                         <a href="noticia2.php" > Halo </a><br/>
                         <a href="noticia3.php" > Call of Duty </a><br/>
                         <a href="noticia4.php" > Skyrim </a><br/>
@@ -189,28 +146,51 @@
                     <div class="top">
                         <h1> Propaganda 2 </h1>                    
                     </div>
-                </div>
+                </div>    
+                <div id="materias">
+                    <a href="materia_rosto_tomb_raider.php"> 
+                        <div class="materias"> 
+                            <span class="informacao-materia"> Conheça a Tecnologia por trás de Rise of The Tomb Raider. </span> 
+                            <img src="imagens/jogo008.jpg" class="img-materia">
+                        </div> 
+                    </a>
+                    <a href="materia_fifa_15_times_brasileiros.php"> 
+                        <div class="materias"> 
+                            <span class="informacao-materia"> Saiba porque os times brasileiros foram deixados de lado em FIFA 15. </span>
+                            <img src="imagens/jogo010.jpg" class="img-materia">
+                        </div> 
+                    </a>
+                    <a href="materia_atualizacao_psvita.php"> 
+                        <div class="materias">
+                            <span class="informacao-materia"> Atualização do PS Vita. </span>
+                            <img src="imagens/jogo011.jpg" class="img-materia">
+                        </div> 
+                    </a>
+                    <a href="materia_7_bgs.php"> 
+                        <div class="materias"> 
+                            <span class="informacao-materia"> BGS - 7ª Edição vem em outubro. Já comprou seu ingresso? </span>
+                            <img src="imagens/jogo009.jpg" class="img-materia">
+                        </div> 
+                    </a>
+                    <a href="materia_battlefield.php"> 
+                        <div class="materias"> 
+                            <span class="informacao-materia"> Battlefield </span>
+                            <img src="imagens/jogo005.jpg" class="img-materia">
+                        </div> 
+                    </a>
+                </div>                
                 </article>                
-                <footer id="rodape"> 
-                    <div id="informacao">
-                        <a href="quem_somos.php"> <div id="quem-somos"> Quem somos </div> </a>
-                        <a href="contato.php"> <div id="contato"> Contato </div> </a>
-                        <a href="escreva.php"> <div id="escreva"> Escreva uma Matéria </div> </a>
-                        <a href="duvidas.php"> <div id="duvidas"> Dúvidas </div> </a>
-                    </div>
-                    <div id="outros-links">
-                        <div id="colunas-rodape"> 
-                            <h1> Colunas </h1>
-                            <a href="colunas.php"> Coluna 1 </a> <br/>
-                            <a href="colunas.php"> Coluna 2 </a> <br/>
-                            <a href="colunas.php"> Coluna 3 </a> <br/>
-                            <a href="colunas.php"> Coluna 4 </a> <br/>  
-                            <a href="colunas.php"> Coluna 5 </a> <br/>
-                            <a href="colunas.php"> Coluna 6 </a> <br/>
-                            <a href="colunas.php"> Coluna 7 </a> <br/>
-                            <a href="colunas.php"> Coluna 8 </a> 
+                <footer id="rodape">                    
+                    <div class="links-rodape"> 
+                            <h1> Multiplayer </h1>
+                            <a href="quem_somos.php"> Quem Somos </a> <br/>
+                            <a href="contato.php"> Contato </a> <br/>
+                            <a href="escreva.php"> Escreva uma Matéria </a> <br/>
+                            <a href="duvidas.php"> Dúvidas </a> <br/>  
+                            <a href="#"> Parcerias </a> <br/>
+                            <a href="#"> Mapa do Site </a> <br/>
                         </div>
-                        <div id="plataformas"> 
+                        <div class="links-rodape">
                             <h1> Plataformas </h1>
                             <a href="ps3.php"> PS3 </a> <br/>
                             <a href="pc.php"> PC </a> <br/>
@@ -219,9 +199,9 @@
                             <a href="ps4.php"> PS4 </a> <br/>
                             <a href="3ds.php"> 3DS </a> <br/>
                             <a href="xbox_one.php.php"> Xbox One </a> <br/>
-                            <a href="ps4.php"> PS4 </a> 
+                            <a href="ps4.php"> PS4 </a> <br/>
                         </div>
-                        <div id="series"> 
+                        <div class="links-rodape">
                             <h1> Séries </h1>
                             <a href="serie_mario.php"> Mario </a> <br/>
                             <a href="serie_batman.php"> Batman </a> <br/>
@@ -230,9 +210,9 @@
                             <a href="serie_bioshock.php"> Bioshock </a> <br/>
                             <a href="serie_the_sims.php"> The Sims </a> <br/>
                             <a href="serie_legend_of_zelda.php"> Legend of Zelda </a> <br/>
-                            <a href="serie_god_of_war.php"> Pokémon </a> 
+                            <a href="serie_pokemon.php"> Pokémon </a> <br/>
                         </div>
-                        <div id="generos"> 
+                        <div class="links-rodape">
                             <h1> Gêneros </h1>
                             <a href="genero1.php"> Ação </a> <br/>
                             <a href="genero2.php"> FPS </a> <br/>
@@ -241,12 +221,17 @@
                             <a href="genero4.php"> Plataforma </a> <br/>
                             <a href="genero4.php"> RPG </a> <br/>
                             <a href="genero4.php"> Aventura </a> <br/>
-                            <a href="genero4.php"> Casual </a> 
+                            <a href="genero4.php"> Casual </a> <br/>
                         </div>
-                        <div id="propaganda3"> 
-                            <h1> Propaganda 3 </h1>
+                        <div id="propaganda3">
+                            <iframe src="http://www.brasilgameshow.com.br/publico/contador.php" style="width: 224px; height: 210px; display: block; margin: 0 auto; border: none; overflow: hidden;">
+                                
+                            </iframe>
+
                         </div>
-                    </div>                    
+                    <div id="logo-empresa">
+                        <img src="imagens/logoempresa.png" alt="" id="img-logo-empresa">
+                    </div>
                 </footer>
                 </section>
         </container>

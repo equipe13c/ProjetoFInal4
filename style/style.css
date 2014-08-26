@@ -1,91 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     width: 1000px;
-    height: 2290px;
-    background-image: url(../imagens/batman.jpg);
-    background-attachment: fixed;
-    background-position: 1354px 0px;
+    height: 100%;
+    background-color: darkgrey;
 }
 
 #secao, #container{    
     width: 1000px;
-    height: 2280px;
+    height: auto;
     left: 50%;
     margin-top: 0px;
     margin-left: -500px;
+    background-color: red;
     float: left;    
     position: absolute;
 }
 
 #cabecalho{
     width: 1000px;
-    height: 170px;
+    height: 200px;
     margin-top: 0px;
     margin-left: 0px;
-    float: left;    
+    float: left;   
 }
 
 #logo{
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 200px;
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 10px;
     float: left;
 }
 
 #img-logo{
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     margin-top: 0px;
     margin-left: 0px;
 }
 
 #menu-principal{
     width: 820px;
-    height: 30px;
+    height: 54px;
     margin-top: 0px;
     margin-right: 0px;
     float: right;
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
     background-color: #00989E;
 }
 
 .home{
-    width: 780px;
+    width: 820px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     font-family: century gothic;
-    color: white;    
+    color: #fff;    
     list-style: none;
 }
 
 .home li{
     position: relative;
-    float: left;    
+    float: left;
 }
 
 .home li a{
     color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
+    text-decoration: none;  
     display: block;
-    margin-left: 14px;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
 }
 
 .home li a:hover{
     background: #333;
-    color: #fff;
+    color: #fff;    
 }
 
 .home li ul{
     position: absolute;
     background-color: #00989E;
     display: none;
-    padding: 5px 5px;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
 } 
 
 .home li:hover ul, .menu li.over ul{
-    display: none;
+    display: block; 
+    width: 150px;
 }
 
 .home li ul li{
@@ -94,59 +106,64 @@ body{
 }
 
 .submenu-home li a{
-    margin-left: 0px;
-    display: none;
+    margin-left: 0px;    
 }
 
 #menu-ps{
     width: 820px;
-    height: 30px;
+    height: 54px;
     margin-top: 0px;
     margin-right: 0px;
     float: right;
-    background-color: #9C1006; 
-    font-family: century gothic;
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
+    background-color: #9C1006;
 }
 
 .ps{
-    width: 780px;
+    width: 820px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     font-family: century gothic;
-    color: white;    
+    color: #fff;    
     list-style: none;
 }
 
 .ps li{
     position: relative;
-    float: left;    
+    float: left;
 }
 
 .ps li a{
     color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
+    text-decoration: none;  
     display: block;
-    margin-left: 14px;
-    display: block;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
 }
 
 .ps li a:hover{
     background: #333;
-    color: #fff;
+    color: #fff;    
 }
 
 .ps li ul{
     position: absolute;
     background-color: #9C1006;
     display: none;
-    padding: 5px 5px;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
 } 
 
 .ps li:hover ul, .menu li.over ul{
-    display: block;
+    display: block; 
+    width: 150px;
 }
 
 .ps li ul li{
@@ -155,58 +172,64 @@ body{
 }
 
 .submenu-ps li a{
-    margin-left: 0px;
+    margin-left: 0px;    
 }
 
 #menu-nintendo{
     width: 820px;
-    height: 30px;
+    height: 54px;
     margin-top: 0px;
     margin-right: 0px;
     float: right;
-    background-color: #009FE3; 
-    font-family: century gothic;   
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
+    background-color: #009FE3;
 }
 
 .nintendo{
-    width: 780px;
+    width: 820px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     font-family: century gothic;
-    color: white;    
+    color: #fff;    
     list-style: none;
-    background-color: #009FE3;
 }
 
 .nintendo li{
     position: relative;
-    float: left;    
+    float: left;
 }
 
 .nintendo li a{
     color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
+    text-decoration: none;  
     display: block;
-    margin-left: 14px;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
 }
 
 .nintendo li a:hover{
     background: #333;
-    color: #fff;
+    color: #fff;    
 }
 
 .nintendo li ul{
     position: absolute;
     background-color: #009FE3;
     display: none;
-    padding: 5px 5px;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
 } 
 
 .nintendo li:hover ul, .menu li.over ul{
-    display: block;
+    display: block; 
+    width: 150px;
 }
 
 .nintendo li ul li{
@@ -215,58 +238,64 @@ body{
 }
 
 .submenu-nintendo li a{
-    margin-left: 0px;
+    margin-left: 0px;    
 }
 
 #menu-xbox{
     width: 820px;
-    height: 30px;
+    height: 54px;
     margin-top: 0px;
     margin-right: 0px;
     float: right;
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
     background-color: #8EA50D;
-    font-family: century gothic;   
 }
 
 .xbox{
-    width: 780px;
+    width: 820px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     font-family: century gothic;
-    color: white;    
+    color: #fff;    
     list-style: none;
-    background-color: #8EA50D;
 }
 
 .xbox li{
     position: relative;
-    float: left;    
+    float: left;
 }
 
 .xbox li a{
     color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
+    text-decoration: none;  
     display: block;
-    margin-left: 14px;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
 }
 
 .xbox li a:hover{
     background: #333;
-    color: #fff;
+    color: #fff;    
 }
 
 .xbox li ul{
     position: absolute;
     background-color: #8EA50D;
     display: none;
-    padding: 5px 5px;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
 } 
 
 .xbox li:hover ul, .menu li.over ul{
-    display: block;
+    display: block; 
+    width: 150px;
 }
 
 .xbox li ul li{
@@ -275,118 +304,64 @@ body{
 }
 
 .submenu-xbox li a{
-    margin-left: 0px;
-}
-
-#menu-pc{
-    width: 820px;
-    height: 30px;
-    margin-top: 0px;
-    margin-right: 0px;
-    float: right;
-    background-color: #F39200;
-    font-family: century gothic;   
-}
-
-.pc{
-    width: 780px;
-    height: 30px;
-    margin-top: 0px;
-    margin-left: 0px;
-    float: left;
-    font-family: century gothic;
-    color: white;    
-    list-style: none;
-    background-color: #F39200;
-}
-
-.pc li{
-    position: relative;
-    float: left;    
-}
-
-.pc li a{
-    color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
-    display: block;
-    margin-left: 14px;
-}
-
-.pc li a:hover{
-    background: #333;
-    color: #fff;
-}
-
-.pc li ul{
-    position: absolute;
-    background-color: #F39200;
-    display: none;
-    padding: 5px 5px;
-} 
-
-.pc li:hover ul, .menu li.over ul{
-    display: block;
-}
-
-.pc li ul li{
-    display: block;
-    width: 150px;
-}
-
-.submenu-pc li a{
-    margin-left: 0px;
+    margin-left: 0px;    
 }
 
 #menu-outros{
     width: 820px;
-    height: 30px;
+    height: 54px;
     margin-top: 0px;
     margin-right: 0px;
     float: right;
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
     background-color: #6D6A65;
-    font-family: century gothic;   
 }
 
 .outros{
-    width: 780px;
+    width: 820px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     font-family: century gothic;
-    color: white;    
+    color: #fff;    
     list-style: none;
-    background-color: #6D6A65;
 }
 
 .outros li{
     position: relative;
-    float: left;    
+    float: left;
 }
 
 .outros li a{
     color: #fff; 
-    text-decoration: none; 
-    padding: 4.5px 6px; 
+    text-decoration: none;  
     display: block;
-    margin-left: 14px;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
 }
 
 .outros li a:hover{
     background: #333;
-    color: #fff;
+    color: #fff;    
 }
 
 .outros li ul{
     position: absolute;
     background-color: #6D6A65;
     display: none;
-    padding: 5px 5px;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
 } 
 
 .outros li:hover ul, .menu li.over ul{
-    display: block;
+    display: block; 
+    width: 150px;
 }
 
 .outros li ul li{
@@ -395,51 +370,112 @@ body{
 }
 
 .submenu-outros li a{
+    margin-left: 0px;    
+}
+
+#menu-pc{
+    width: 820px;
+    height: 54px;
+    margin-top: 0px;
+    margin-right: 0px;
+    float: right;
+    line-height: 34pt;
+    font-family: century gothic;  
+    font-weight: bold;    
+    background-color: #F39200;
+}
+
+.pc{
+    width: 820px;
+    height: 30px;
+    margin-top: 0px;
     margin-left: 0px;
+    float: left;
+    font-family: century gothic;
+    color: #fff;    
+    list-style: none;
+}
+
+.pc li{
+    position: relative;
+    float: left;
+}
+
+.pc li a{
+    color: #fff; 
+    text-decoration: none;  
+    display: block;
+    padding: 4.5px 6px;
+    margin-left: 16px;
+    display: block;    
+    font-size: 16px;
+}
+
+.pc li a:hover{
+    background: #333;
+    color: #fff;    
+}
+
+.pc li ul{
+    position: absolute;
+    background-color: #F39200;
+    display: none;
+    padding: 0px 0px;
+    line-height: 18pt;    
+    margin-left: 16px;
+} 
+
+.pc li:hover ul, .menu li.over ul{
+    display: block; 
+    width: 150px;
+}
+
+.pc li ul li{
+    display: block;
+    width: 150px;
+}
+
+.submenu-pc li a{
+    margin-left: 0px;    
+}
+
+#redes-sociais{
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 0px;
+    float: left;
+    display:none;
+}
+
+.redes-sociais{
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+    margin-left: 15px;
+    float: left;
 }
 
 #propaganda1{
-    width: 810px;
-    height: 110px;
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
-    background-color: white;
-    box-shadow: 0 0 0 5px #333;
-}
-
-#propaganda1 h1{
-    font-family: century gothic;
-    font-size: 12pt;
-    color: white;
-    margin-top: 0px;
-    background-color: #333;
-    line-height: 15pt;
-}
-
-#propaganda2{
-    width: 200px;
-    height: 344px;
-}
-
-#img-propaganda1{
     width: 820px;
-    height: 120px;
-    margin-top: 0px;
-    margin-right: 0px;    
+    height: 130px;
+    margin-top: 15px;
+    margin-right: 0px;
+    float: right;
+    background-color: #fff;
 }
 
 #busca{
     width: 300px;
     height: 30px;
-    margin-top: 20px;
-    margin-right: 16px;
+    margin-top: 50px;
+    margin-right: 0px;
     float: right;
-    box-shadow: 0 0 0 5px #333;
+    border: solid 5px #333;
 }
 
 #lupa{
-    width: 33px;
+    width: 35px;
     height: 30px;
     margin-top: 0px;
     margin-left: 0px;
@@ -448,71 +484,50 @@ body{
 
 #caixa-busca{
     width: 265px;
-    height: 28px;
+    height: 30px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
     border: none;
-    color: white;
+    color: #fff;
     font-family: century gothic;
     text-align: center;    
-    background-color: #555;
+    background-color: #fff;
+    color: #333;
 }
 
 #conteudo{
     width: 1000px;
-    height: 1150px;
+    height: auto;
     margin-top: 50px;
     margin-left: 0px;
+    margin-bottom: 50px;
     float: left;
-}
-
-#rodape{
-    width: 980px;
-    height: 250px;
-    margin-top: 50px;
-    margin-left: 10px;
-    float: left;
-    background-color: #555; 
-    text-align: center;
-    color: #005890;
-    font-family: century gothic;
-    font-size: 12pt;    
-    box-shadow: 0 0 0 10px #333;
-}
-
-#rodape h1{
-    font-family: century gothic;
-    font-size: 12pt;
-    color: white;
-    margin-top: 0px;
-    background-color: #333;
-    line-height: 15pt;
+    background-color: white;
 }
 
 #slideshow{
-    width: 960px;
-    height: 500px;
-    margin-top: 50px;
-    margin-left: 20px;
+    width: 730px;
+    height: 400px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 50px;
     float: left;
-    background-color: #6D6A65;
-    box-shadow: 0 0 0 10px #333; 
+    border: solid 10px #333;
 }
 
 #galeria{
-    width: 660px;
-    height: 350px;
+    width: 730px;
+    height: 400px;
     margin-top: 0px;
     margin-left: 0px;
     float: left;
-    background-color:white;
     display: block;
     overflow: hidden;    
 }
 
 #galeria ul{
-    margin-left: -40px;
+    margin-left: 0px;
     margin-top: 0px;
     float:left;
     list-style: none;
@@ -521,67 +536,37 @@ body{
 }
 
 #galeria ul li{
-    width: 660px;
-    height: 350px;
+    width: 730px;
+    height: 400px;
     display: inline-block;
     position: relative;
 }
 
 #galeria ul li span{
-    width: 640px;
+    width: 740px;
+    height: 50px;
     display: table;
     background-color: #333;
-    opacity: 0.7;
     position: absolute;
     bottom: 0;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-bottom: 0px;
     font-family: century gothic;
     font-size: 12pt;
     color: #fff;
 }
 
-#img1, #img2, #img3, #img4, #img5{
+.img-galeria{
     width: 100%;
     height: 100%;
 }
 
-#imagens-galeria1{
-    width: 300px;
-    height: 500px;
-    margin-top: 0px;
-    margin-right: 0px;
-    float: right;
-}
-
-#imagens-galeria2{
-    width: 660px;
-    height: 150px;
-    margin-top: 0px;
-    margin-right: 0px;
-    float: left;
-}
-
-.imagens-galeria1{
-    width: 300px;
-    height: 250px;
-    margin-bottom: 0px;
-    float: left;
-    
-}
-
-.imagens-galeria2{
-    width: 220px;
-    height: 150px;
-    margin-right: 0px;
-    float:right;
-}
-
 #buttons{
+    width: 104px;
     display: none;
     position: absolute;
     margin-top: 5px;
-    margin-left: 280px;
+    margin-left: 315px;
     z-index: 500;
 }
 
@@ -593,161 +578,306 @@ body{
     text-align: center;
     line-height: 40px;
     font: 22pt Arial;
-    color: white;
+    color: #333;
     text-decoration: none;
-    opacity: 0.7;
 }
 
 #buttons a:hover{
-    color: #555;    
-}
-
-#topicos{
-    width: 300px;
-    height: 500px;
-    margin-top: 0px;
-    margin-right: 0px;
-    float: right;    
-}
-
-.topicos-slideshow{
-    display: none;
-    width: 220px;
-    height: 68px;
-    margin-top: 10px;
-    margin-left: 10px;    
-    float: left;
-    background-color: white;    
-}
-
-#materias{
-    width: 740px;
-    height: 1090px;
-    margin-top: 20px;
-    margin-left: 5px;
-    float: left;  
-    text-align: center;
-}
-
-.informacao-materia{
-    width: 680px;
-    height: 40px;
-    display: table;
-    background-color: #333;
-    position: absolute;    
-    margin-left: 0px;
-    margin-top: 140px;
-    font-family: century gothic;
-    font-size: 11pt;
-    color: #fff;
-    line-height: 20pt;
-    font-style: italic;
-}
-
-.materias{
-    width: 680px;
-    height: 180px;
-    margin-top: 12px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    float: left;
-    background-color: white;  
-    box-shadow: 0 0 0 10px #333;
-    font-family: century gothic;
-}
-
-.img-materia{
-    width: 680px;
-    height: 180px;    
+    color: #fff;    
 }
 
 #coluna-lateral{
-    width: 200px;
-    height: 1090px;
-    margin-top: 25px;
-    margin-left: 20px;
-    float: left;    
+    width: 220px;
+    height: 1583px;
+    margin-top: 0px;
+    margin-right: 0px;
+    float: right;    
     text-align: center;
 }
 
 .top{
     width: 200px;
     height: 344px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     margin-left: 0px;
     float: left;
-    background-color: white;
-    box-shadow: 0 0 0 10px #333;
+    background-color: #fff;
+    border: solid 10px #333;
     font-family: century gothic;
     line-height: 21pt;
+    
 }
 
 .top h1{
     margin-top: 0px;
+    margin-bottom: 5px;
     font-family: century gothic;
     font-size: 12pt;
     background-color: #333;
-    color: white;
+    color: #fff;
 }
 
-#informacao{
-    width: 250px;
-    height: 250px;
+.top a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.top a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#propaganda2{
+    width: 200px;
+    height: 344px;
+}
+
+#materias{
+    width: 750px;
+    height: auto;
     margin-top: 0px;
     margin-left: 0px;
-    float: left;
-}
-
-#quem-somos, #contato, #escreva, #duvidas{
-    width: 110px;
-    height: 110px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-bottom: -35px;
     float: left;  
-    color: white;
-    line-height: 20pt;
+    text-align: center;
 }
 
-#outros-links{
-    width: 710px;
-    height: 250px;
+#materias2{
+    width: 750px;
+    height: auto;
     margin-top: 0px;
-    margin-left: 20px;
-    float: left;
+    margin-left: 0px;
+    float: left;  
+    text-align: center;
 }
 
-#colunas-rodape, #plataformas, #series, #generos, #propaganda3{
-    width: 130px;
-    height: 230px;
-    margin-top: 10px;
-    margin-left: 10px;
+#secao2{
+    width: 730px;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    float: left;  
+    text-align: center;
+    background-color: #fff;
+    border: solid 10px #333; 
+}
+
+#secao2 img{
+    box-shadow: 0 0 0 10px #333;
+}
+
+#secao2 h1{
+    font-family: century gothic;
+    color: #fff;
+    background-color: #333;
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 4px;
+}
+
+#secao2 p{
+    font-family: calibri;
+    color: #000;
+    font-size: 12pt;
+    text-align: left;
+    line-height: 16pt;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#colunista{
+    width: 730px;
+    height: 200px;
+    float:left;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    background-color: lightgray;
+    border: solid 10px #333;
+}
+
+#img-colunista{
+    width: 150px;
+    height: 150px;
     float: left;
-    color: white;
-    line-height: 17pt;    
-    box-shadow: 0 0 0 2px #333;
+    margin-top: 25px;
+    margin-left: 30px;
+    background-color: #fff;
+}
+
+#criador-materia{
+    width: 490px;
+    height: 150px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 30px;
+    background-color: #fff;    
+}
+
+.informacao-materia{
+    width: 730px;
+    height: 40px;
+    display: table;
+    background-color: #333;
+    position: absolute;    
+    margin-left: 0px;
+    margin-top: 140px;    
+}
+
+.materias{
+    width: 730px;
+    height: 180px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    float: left;
+    background-color: #fff;  
+    border: solid 10px #333;
+    font-family: century gothic;
+    font-size: 11pt;
+    line-height: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ultima-materia{
+    width: 730px;
+    height: 180px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    float: left;
+    background-color: #fff;  
+    border: solid 10px #333;
+    font-family: century gothic;
+    font-size: 11pt;
+    line-height: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
 }
 
 #login{
-    width: 430px;
+    width: 730px;
     height: 500px;
-    margin-top: 50px;
-    margin-left: 350px;
+    margin-top: 0px;
+    margin-left: 0px;
     float: left; 
+    background-color: white;
+    border: solid 10px #333;
 }
-#login a:hover{
-    color:white;
+
+#login h1{
+    font-family: century gothic;
+    color: #fff;
+    background-color: #333;
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 4px;
+}
+
+#login p{
+    font-family: calibri;
+    color: #000;
+    font-size: 12pt;
+    text-align: left;
+    line-height: 16pt;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#rodape{
+    width: 981px;
+    height: 250px;
+    margin-top: -10px;
+    margin-left: 0px;
+    margin-bottom: 50px;
+    float: left;
+    background-color: #8e8e8e; 
+    text-align: center;
+    color: #005890;
+    font-family: century gothic;
+    font-size: 12pt;   
+    border: solid 10px #333;
+}
+
+#rodape h1{
+    font-family: century gothic;
+    font-size: 12pt;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: #333;
+    line-height: 15pt;
+}
+
+.links-rodape{
+    width: 130px;
+    height: 236px;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+    color: #fff;
+    line-height: 17pt;    
+    border: solid 2px #333;
+}
+
+#propaganda3{
+    width: 245px;
+    height: 240px;
+    margin-top: 5px;
+    margin-left: 15px;
+    float: left;
+    color: #fff;
+}
+
+#logo-empresa{
+    width: 150px;
+    height: 240px;
+    margin-top: 5px;
+    margin-left: 10px;
+    float: left;
+    color: #fff;
+}
+
+#img-logo-empresa{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 0px;
+    margin-top: -40px;
 }
 
 #cadastro{
-    width: 430px;
+    width: 980px;
     height: 500px;
-    margin-top: 50px;
-    margin-left: 350px;
+    margin-top: 0px;
+    margin-left: 0px;
     float: left;    
+    background-color: #fff;
+    border: solid 10px #333;
 }
 #cadastro a:hover{
-    color:white;
+    text-decoration: underline;
 }
+
+#cadastro h1{
+    height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: century gothic;
+    font-size: 15pt;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
 #colunas{
     width: 740px;
     height: 1090px;
@@ -763,28 +893,10 @@ body{
     margin-top: 25px;
     margin-left: 15px;
     float: left;
-    background-color: white;      
+    background-color: #fff;      
 }
 
-#materia{
-    width: 740px;
-    height: 1092px;
-    margin-top: 0px;
-    margin-left: 20px;
-    float: left;
-    background-color: white;       
-}
-
-#colunista{
-    width: 700px;
-    height: 200px;
-    margin-top: 850px;
-    margin-left: 20px;
-    float: left;
-    background-color: lightgray;   
-}
-
-#rodape a:visited{
+#rodape a{
     text-decoration: none;
     color: #fff;
     font-family: century gothic;
@@ -793,13 +905,75 @@ body{
     font-style: italic;
 }
 
-#rodape a{
-    text-decoration: none;
-    color: white;
-    font-family: century gothic;
-    font-size: 10pt;
-    line-height: 10pt;    
-    font-style: italic;
+#rodape a:hover{
+    text-decoration: underline;
+}
+
+.txts{
+   margin-right:100px;
+   float:right;
+}
+.txtsmateria{
+   margin-right:300px;
+   float:right;
+}
+
+.stringmateria{
+    margin-left:50px;
+    float:left;
+}
+.vars{
+    margin-left:50px;
+    line-height: 21pt;
+    color: #333;
+}
+#frmAlterarDados{
+    width:390px;
+    margin-left:400px;
+    line-height:20pt;
+    float:left;
+    height:170px;
+}
+.txtsAlterarDados{
+    float:right;
+}
+#buttonAlterar{
+    margin-left:130px;
+    margin-top:15px;
+}
+#quadro{
+    width:220px;
+    margin-left:400px;
+    line-height:20pt;
+    float:left;
+    height:175px;
+}
+
+.janela-login{
+    display:none;
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#fff;
+    z-index:9900;
+    padding:10px;
+    border: solid 10px #333;
+}
+ 
+#mascara{
+    display:none;
+    position:relative;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color: #333;
+}
+ 
+.fechar{
+    display:block; 
+    text-align:right;
 }
 
 .txts{

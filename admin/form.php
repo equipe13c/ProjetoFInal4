@@ -72,7 +72,7 @@ switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
         $data = $_POST['dataNasc'];
         $code = $_POST['cod_user'];
         $motivo = $_POST['motivo'];
-        function salvaLog($mensagem,$name,$data,$code,$motivo,$email) {
+        function salvaLog($mensagem,$code) {
         $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
         $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
         $acao = 5;
@@ -87,21 +87,15 @@ switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
         echo "$mensagem às <b>$hora</b> do dia <b>$dia</b>";
         }
         echo "<meta charset=utf-8>";
-        $busca2 = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-        $resultado2 = mysql_query($busca2);
-        $totalUsers2 = mysql_num_rows($resultado2);
-        $users2 = mysql_fetch_assoc($resultado2);
-        $sql2 = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users2['ACAO_LOG'];   
-        $resultado3 = mysql_query($sql2);
-        $mensagem = "Usuário $name $resultado3"; 
-        salvaLog($mensagem,$name,$data,$code,$motivo,$email);
+        $mensagem = "Usuário $name Reativado"; 
+        salvaLog($mensagem,$code);
         //Fim
         break;
         case 'deletar':
         //Inicio
         $code = $_POST['cod_user'];
         validaAutenticacao('../index.php', '1');  
-        function salvaLog($mensagem,$name,$data,$code,$motivo,$email) {
+        function salvaLog($mensagem) {
         $ip = $_SERVER['REMOTE_ADDR']; // Salva o IP do visitante
         $hora = date('Y-m-d H:i:s'); // Salva a hora atual (formato MySQL)
         $acao = 4;
@@ -116,15 +110,8 @@ switch (get_post_action('alterar', 'desativar','reativar', 'deletar')) {
         $users = mysql_fetch_assoc($resultado);
         $sql = "DELETE FROM USUARIO WHERE COD_USUARIO = $code";        
         if(mysql_query($sql)){
-            
-        $busca2 = "SELECT * FROM LOG WHERE AUTOR_LOG='$email'";
-        $resultado2 = mysql_query($busca2);
-        $totalUsers2 = mysql_num_rows($resultado2);
-        $users2 = mysql_fetch_assoc($resultado2);
-        $sql2 = "SELECT NOME_ACAO FROM ACOES_LOG WHERE COD_ACOES_LOG=".$users2['ACAO_LOG'];   
-        $resultado3 = mysql_query($sql2);
-        $mensagem = "Usuário $name $resultado3"; 
-        salvaLog($mensagem,$name,$data,$code,$motivo,$email);
+        $mensagem = "Usuário $name Deletado"; 
+        salvaLog($mensagem);
         
         echo "Nome: " . $users['NOME_USUARIO'] . "<br/>";
         echo "E-mail: " . $users['EMAIL_USUARIO'] . "<br/>";
