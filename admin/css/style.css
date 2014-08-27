@@ -15,15 +15,12 @@ table.tabelas tr th {
     border:1px solid black;
     text-align:center;
 }
-#backPerfil{
-    width:200px;
-    float:left;
-    display:block;
-}
 #backIframe{
     float:left;
     width:1050px;
-    height:550px;    
+    height:550px; 
+    margin-top:30px;
+    border:0px;
 }
 #tela{
     width:1050px;
@@ -55,14 +52,62 @@ table.tabelas tr th {
 .txtsNovoUsuario{
     float:right;
 }
-#imagemUser{
-    width:80px;
-    height:80px;
-    background-color: antiquewhite;
-}
+
 #imagem_usuario{
-    width:80px;
-    height:80px;
+    width:30px;
+    height:30px;
     margin-left:0px;
-    margin-height:0px;
+    margin-left:5px;
+    margin-top:5px;
+    float:left;
 }
+#menu{
+    width:200px;
+    height:40px;
+    float:left;
+}
+#menuOpcoes{
+    width:800px;
+    height:40px;
+    float:left;
+}
+#nome_adm{
+    margin-left:5px;
+    margin-top:10px;
+    font-size:12pt;
+    font-family: century gothic;
+    float:left;
+}
+.home{
+    width: 800px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-family: century gothic;
+    list-style: none;
+}
+
+.home li{
+    float: left;
+}
+
+.home li a{
+    color: black; 
+    text-decoration: none;  
+    display: block;
+    padding: 10px 15px 0px 0px;
+    margin-left: 0px;
+    display: block;    
+    font-size: 14px;
+}
+
+.home li a:hover{
+    color: #00989E; 
+    text-decoration: none;  
+    display: block;
+    padding: 10px 15px 0px 0px;
+    margin-left: 0px;
+    display: block;    
+    font-size: 14px;  
+}
+

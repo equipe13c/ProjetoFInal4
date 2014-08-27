@@ -94,20 +94,20 @@
                         <form action="inserirUser.php" id="cadastroForm" method="post" name="formCad"> 
                             <label class="vars"> Nome: </label>
                             <div class="validacoes" id="msName"></div>
-                            <input type="text" class="txts" name="nome" onKeyPress="return letras();" placeholder="Nome de Acesso" required/> <br/>
+                            <input type="text" class="txts" name="nome"  onKeyPress="return letras();" placeholder="Nome de Acesso" /> <br/>
                             <label class="vars">Email: </label>
                             <div class="validacoes" id="msgemail"></div>
-                            <input  type="text" name="email" onblur="validacaoEmail(formCad.email,'msgemail');" class="txts"  id="email" placeholder="Digite seu E-mail" required/>
+                            <input  type="text" name="email" onblur="validacaoEmail(formCad.email,'msgemail');" class="txts"  id="email" placeholder="Digite seu E-mail" />
                             <br/>
                             <label class="vars">Confirmar Email: </label>
                             <div class="validacoes" id="msgConfirmemail"></div>
-                            <input  type="text" name="confirmemail" onblur="validacaoEmail(formCad.confirmemail,'msgConfirmemail');" class="txts" id="confirmemail"  placeholder="Digite seu E-mail" required/> <br/>
+                            <input  type="text" name="confirmemail" onblur="validacaoEmail(formCad.confirmemail,'msgConfirmemail');" class="txts" id="confirmemail"  placeholder="Digite seu E-mail" /> <br/>
                             <label class="vars">Senha: </label>
                             <div class="validacoes" id="msgSenha"></div>
-                            <input type="password" class="txts" name="senha" id="senha"  onblur="validaSenha();" placeholder="Senha" required/> <br/>
+                            <input type="password" class="txts" name="senha" id="senha"  onblur="validaSenha();" placeholder="Senha" /> <br/>
                             <label class="vars">Confirmar Senha: </label>
                             <div class="validacoes" id="msgConfirmsenha"></div>
-                            <input type="password" class="txts" name="confirmsenha" id="confirmsenha" onblur="validaSenha();" required placeholder="Confirmar Senha"/> <br/>
+                            <input type="password" class="txts" name="confirmsenha" id="confirmsenha" onblur="validaSenha();"  placeholder="Confirmar Senha"/> <br/>
                             <label class="vars">Data Nasc. </label>
                             <div class="validacoes" id="msgData"></div>
                             <input type="text" class="txts" name="data" onKeyPress="MascaraData(formCad.data);" maxlength="10" onBlur="validarData(formCad.data);"> <br/>
@@ -118,7 +118,7 @@
                             </div>
                             <a id="atualizarCaptcha"onclick="atualizarCaptcha();">Mudar Captcha</a>
                             <input type="text" id="captchaPalavra"class="txts"  name="palavra" maxlength="6" onKeyPress="return letrasNumeros();"> <br/>
-                            <input type="submit" id="btnCad" class="btnCads" name="cadastrar" value="Cadastrar"/>
+                            <input type="submit" id="btnCad" class="btnCads" name="cadastrar" onclick="validacoes()" value="Cadastrar"/>
                             <input type="reset" class="btnCads" name="limpar" value="Limpar"/>
                         </form>
                     </div>                    

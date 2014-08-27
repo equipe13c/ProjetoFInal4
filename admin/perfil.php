@@ -19,10 +19,11 @@ validaAutenticacao('../index.php', '1');
         $totalUsers = mysql_num_rows($resultado);
         $users = mysql_fetch_assoc($resultado);
         echo "
-        <fieldset id=frmAlterarDados>
+        <div id=frmAlterarDados>
         <h4>Bem Vindo ". $users['NOME_USUARIO'] . "</h4>
         <form action='alterarDados.php' method='post' id='frmAlterar' enctype='multipart/form-data'>
         <input type='hidden'  readonly='readonly' class='txtsAlterarDados' id='id' size='35'  name='cod_user' value='" . $users['COD_USUARIO'] . "'>
+        <input type='hidden'  readonly='readonly' class='txtsAlterarDados' id='id' size='35'  name='tipo' value='" . $users['TIPO_USUARIO'] . "'>
         <label class='stringAlterarDados'> Nome: </label><input type='text'  class='txtsAlterarDados' size='35' id='nome'  name='name' value='" . $users['NOME_USUARIO'] . "'><br/>
         <label class='stringAlterarDados'>Email: </label><input type='text'  class='txtsAlterarDados'  size='35' id='email' name='email' value='" . $users['EMAIL_USUARIO'] . "'><br/>
         <label class='stringAlterarDados'>Confirm. E-mail:</label><input type='text'  class='txtsAlterarDados' size='35' id='confirmemail' name='confirmemail' value='" . $users['EMAIL_USUARIO'] . "'><br/>
@@ -32,7 +33,7 @@ validaAutenticacao('../index.php', '1');
         <br/>
         <input type='submit' id='buttonAlterar' value='Atualizar'>
         </form>
-        </fieldset>";
+        </div>";
         ?>        
     </body>
 </html>

@@ -130,4 +130,9 @@ function validaSenha(){
         }
     }
 }
-
+function validacoes(){
+    if(name == ""){
+        alert("Campo Nome Vazio");
+        formCad.name.focus();
+    }
+}

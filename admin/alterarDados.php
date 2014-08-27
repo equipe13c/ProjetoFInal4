@@ -92,7 +92,7 @@ if(mysql_query($sql)){
     echo "Imagem Atualizada<br/>";
     echo "<a href=listar.php?tipoUser=$tipo>Voltar</a>";
     $mensagem = "Usuário $name";
-    salvaLog($mensagem,$name,$code,$motivo,$email);
+    salvaLog($mensagem);
     
 }
 else{
