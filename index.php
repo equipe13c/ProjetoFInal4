@@ -56,9 +56,7 @@
                                     <li><a href="ps2.php"> Playstation 2 </a></li>
                                 </ul>
                             </li>
-                            <li><a href="login_user.php"> Login </a>
-                                
-                                
+                            <li><a href="login_user.php"> Login </a> 
                             </li>
                         </ul>
                     </nav>

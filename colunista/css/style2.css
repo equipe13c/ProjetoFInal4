@@ -33,10 +33,20 @@ root {
     width:200px;
 }
 #frmNovaMateria{
-    width:370px;
+    width:450px;
+    height:770px;
+}
+#conteudo{
+    height:200px;
+    width:350px;
+}
+#conteudo2{
+    height:200px;
+    width:350px;
 }
 .stringNovaMateria{
     line-height: 20pt;
+    float:left;
 }
 .txtsNovaMateria{
     float:right;

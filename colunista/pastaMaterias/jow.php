@@ -1,125 +1,4 @@
-<?php
-
-include "../conexao/conecta.inc";
-
-include 'funcoes/funcoesCol.php';
-echo "<meta charset=UTF-8>";
-$nome = $_POST['nomeMateria'];
-$tipo = $_POST['categoriaMateria'];
-$descricao = $_POST['descricao'];
-$conteudo = $_POST['conteudo'];
-$conteudo2 = $_POST['conteudo2'];
-$data = $_POST['dataMateria'];
-$hora = $_POST['horaMateria'];
-$autor = $_POST['autor'];
-$url = $_POST['url'];
-
-// Se a foto estiver sido selecionada
-$_UP['pasta'] = "../uploads/";
-$_UP['tamanho'] = 1024 * 1024 * 2; //2MB;
-$_UP['extensao'] = array('jpg','png','gif');
-$_UP['renomeia'] = true;
-
-$_UP['erros'][0] = "Não Houve Erros";
-$_UP['erros'][1] = "O Arquivo é Maior do que o límite do php";
-$_UP['erros'][2] = "Tamanho da imagem ultrapassou o límite exigido";
-$_UP['erros'][3] = "Upload feito parcialmente";
-$_UP['erros'][4] = "Nao teve upload";
-
-if($_FILES['arquivo1']['error'] != 0){
-    die("Não foi Possível alterar a imagem Devido a: <br/>". $_UP['erros'][$_FILES['arquivo1']['erros']]);
-    exit;
-}
-$img_nome = $_FILES['arquivo1']['name'];
-$img_separador = explode('.',$img_nome);
-$extensao = strtolower(end($img_separador));
-if(array($extensao, $_UP['extensao'])=== false){
-    echo "Por Favor Escolha apenas imagens JPG, PNG e GIF";
-}
-                
-else if($_UP['tamanho'] < $_FILES['arquivo1']['size']){
-    echo "Arquivo muito grande, Envie um arquivo1 de até 2MB";
-}
-else{
-    if($_UP['renomeia'] == true){
-function geraSaltAleatorio($tamanho = 6) {
-return substr(md5(mt_rand()), 0, $tamanho); 
-}
-$salt = geraSaltAleatorio();
-        $nome_final1 = $salt.'.jpg';
-    }
-    else{
-        $nome_final1 = $_FILES['arquivo1']['name'];
-    }
-    if(move_uploaded_file($_FILES['arquivo1']['tmp_name'], $_UP['pasta'] . $nome_final1)){
-    }
-    else{
-    }
-}
-
-$_UP['pasta'] = "../uploads/";
-$_UP['tamanho'] = 1024 * 1024 * 2; //2MB;
-$_UP['extensao'] = array('jpg','png','gif');
-$_UP['renomeia'] = true;
-
-$_UP['erros'][0] = "Não Houve Erros";
-$_UP['erros'][1] = "O Arquivo é Maior do que o límite do php";
-$_UP['erros'][2] = "Tamanho da imagem ultrapassou o límite exigido";
-$_UP['erros'][3] = "Upload feito parcialmente";
-$_UP['erros'][4] = "Nao teve upload";
-
-if($_FILES['arquivo']['error'] != 0){
-    die("Não foi Possível alterar a imagem Devido a: <br/>". $_UP['erros'][$_FILES['arquivo']['erros']]);
-    exit;
-}
-$img_nome = $_FILES['arquivo']['name'];
-$img_separador = explode('.',$img_nome);
-$extensao = strtolower(end($img_separador));
-if(array($extensao, $_UP['extensao'])=== false){
-    echo "Por Favor Escolha apenas imagens JPG, PNG e GIF";
-}
-                
-else if($_UP['tamanho'] < $_FILES['arquivo']['size']){
-    echo "Arquivo muito grande, Envie um arquivo de até 2MB";
-}
-else{
-    if($_UP['renomeia'] == true){
-function geraSaltAleatorio2($tamanho = 6) {
-return substr(md5(mt_rand()), 0, $tamanho); 
-}
-$salt = geraSaltAleatorio2();
-        $nome_final = $salt.'.jpg';
-    }
-    else{
-        $nome_final = $_FILES['arquivo']['name'];
-    }
-    if(move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_final)){
-    }
-    else{
-    }
-}
-$nome_imagem = $nome_final1;
-$nome_imagem2 = $nome_final;
-# Nome do arquivo1 html
-
-$urlFinal = "pastaMaterias/$url.php";
-$urlBanco = $url.".php";
-
-
-
-  
-    $query = "INSERT INTO ARTIGO (TITULO_ARTIGO, CATEGORIA_ARTIGO, DESCRICAO_ARTIGO, CONTEUDO_ARTIGO, DATA_ARTIGO, HORA_ARTIGO, AUTOR_ARTIGO, IMAGEM1_ARTIGO,IMAGEM2_ARTIGO)
-        VALUES('$nome', '$tipo', '$descricao', '$conteudo', '$data', '$hora', '$autor', '$nome_imagem','$nome_imagem2')";
-   
-    if(mysql_query($query)){
-    echo "Matéria inserida com sucesso!<br/>";
-    echo "<a href=pastaMaterias/$urlBanco><input type='button' value='Visualizar matéria'> </a>";
-}
-else{
-    echo "Não Foi Possível Inserir a Matéria :( ";
-    echo mysql_error();
-}  
-$corpo = '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title> Multiplayer </title>
@@ -194,14 +73,12 @@ $corpo = '<!DOCTYPE html>
                 </div>                
                 <article id="conteudo">
                     <div id="materias2">
-                        <h1> '.$nome.' </h1><br/><br/>
-                        <img src="../../uploads/'.$nome_imagem.'" alt="" class="imagens"> <br/><br/><br/>
-                        <p> '.$conteudo.'  </p>
+                        <h1> Jow2 </h1><br/><br/>
+                        <img src="../../uploads/7fd4df.jpg" alt=""> <br/><br/><br/>
+                        <p>  qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe qweqwe  </p>
                       <br/><br/><br/>
-                        <img src="../../uploads/'.$nome_imagem2.'" alt="" class="imagens"> <br/><br/><br/>
-                       <br/><br/><br/>
-                       <p> '.$conteudo2.'  </p>
-                    <br/><br/><br/>
+                        <img src="../../uploads/f12522.jpg" alt=""> <br/><br/><br/>
+                       <br/><br/><br/><br/><br/><br/>
                     </div>                    
                     <div id="coluna-lateral">
                     <div class="top"> 
@@ -299,10 +176,3 @@ $corpo = '<!DOCTYPE html>
         </container>
     </body>
 </html>
-';
-# Texto a ser salvo no arquivo1
-$formatacao = $corpo ;
-
-#Criar o arquivo1
-$fp = fopen($urlFinal , "w");
-$fw = fwrite($fp, $formatacao);

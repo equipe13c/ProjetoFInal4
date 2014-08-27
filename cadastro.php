@@ -123,57 +123,49 @@
                         </form>
                     </div>                    
                 </article>                
-                <footer id="rodape">                    
-                    <div class="links-rodape"> 
-                            <h1> Multiplayer </h1>
-                            <a href="index.php"> Home </a> <br/>
-                            <a href="quem_somos.php"> Quem Somos </a> <br/>
-                            <a href="contato.php"> Contato </a> <br/>
-                            <a href="escreva.php"> Escreva uma Matéria </a> <br/>
-                            <a href="termos_uso.php"> Termos de Uso </a> <br/>
-                            <a href="mapa_site.php"> Mapa do Site </a> <br/>
+                <footer id="rodape"> 
+                    <div id="informacao">
+                        <a href="quem_somos.php"> <div id="quem-somos"> Quem somos </div> </a>
+                        <a href="contato.php"> <div id="contato"> Contato </div> </a>
+                        <a href="escreva.php"> <div id="escreva"> Escreva uma Matéria </div> </a>
+                        <a href="duvidas.php"> <div id="duvidas"> Dúvidas </div> </a>
+                    </div>
+                    <div id="outros-links">
+                        <div id="colunas-rodape"> 
+                            Colunas <br/>
+                            <a href="colunas.php"> Coluna 1 </a> <br/>
+                            <a href="colunas.php"> Coluna 2 </a> <br/>
+                            <a href="colunas.php"> Coluna 3 </a> <br/>
+                            <a href="colunas.php"> Coluna 4 </a> <br/>                            
                         </div>
-                        <div class="links-rodape">
-                            <h1> Plataformas </h1>
+                        <div id="plataformas"> 
+                            Plataformas <br/>
                             <a href="ps3.php"> PS3 </a> <br/>
                             <a href="pc.php"> PC </a> <br/>
                             <a href="wii.php"> Wii </a> <br/>
-                            <a href="xbox_360.php"> Xbox 360 </a> <br/>  
-                            <a href="ps4.php"> PS4 </a> <br/>
-                            <a href="3ds.php"> 3DS </a> <br/>
-                            <a href="xbox_one.php.php"> Xbox One </a> <br/>
-                            <a href="ps4.php"> PS4 </a> <br/>
+                            <a href="xbox_360.php"> Xbox 360 </a> <br/>                            
                         </div>
-                        <div class="links-rodape">
-                            <h1> Séries </h1>
-                            <a href="serie_mario.php"> Mario </a> <br/>
-                            <a href="serie_batman.php"> Batman </a> <br/>
-                            <a href="serie_mortal_kombat.php"> Mortal Kombat </a> <br/>
-                            <a href="serie_god_of_war.php"> God of War </a> <br/>
-                            <a href="serie_bioshock.php"> Bioshock </a> <br/>
-                            <a href="serie_the_sims.php"> The Sims </a> <br/>
-                            <a href="serie_legend_of_zelda.php"> Legend of Zelda </a> <br/>
-                            <a href="serie_pokemon.php"> Pokémon </a> <br/>
+                        <div id="series"> 
+                            Séries <br/>
+                            <a href="#"> Série 1 </a> <br/>
+                            <a href="#"> Série 2 </a> <br/>
+                            <a href="#"> Série 3 </a> <br/>
+                            <a href="#"> Série 4 </a> <br/>
                         </div>
-                        <div class="links-rodape">
-                            <h1> Gêneros </h1>
-                            <a href="genero1.php"> Ação </a> <br/>
-                            <a href="genero2.php"> FPS </a> <br/>
-                            <a href="genero3.php"> Corrida </a> <br/>
-                            <a href="genero4.php"> Terror </a> <br/>
-                            <a href="genero4.php"> Plataforma </a> <br/>
-                            <a href="genero4.php"> RPG </a> <br/>
-                            <a href="genero4.php"> Aventura </a> <br/>
-                            <a href="genero4.php"> Casual </a> <br/>
+                        <div id="generos"> 
+                            Gêneros <br/>
+                            <a href="#"> Gênero 1 </a> <br/>
+                            <a href="#"> Gênero 2 </a> <br/>
+                            <a href="#"> Gênero 3 </a> <br/>
+                            <a href="#"> Gênero 4 </a> <br/>
                         </div>
-                        <div id="propaganda3">
-                            <iframe src="http://www.brasilgameshow.com.br/publico/contador.php" style="width: 224px; height: 210px; display: block; margin: 0 auto; border: none; overflow: hidden;">
-                                
-                            </iframe>
-
-                        </div>
-                    <div id="logo-empresa">
-                        <img src="imagens/logoempresa.png" alt="" id="img-logo-empresa">
+                    </div>
+                    <div id="forum"> 
+                        Conheça nosso Fórum <br/>
+                        <a href="forum.php"> Pergunta 1 </a> <br/>
+                        <a href="forum.php"> Pergunta 2 </a> <br/>
+                        <a href="forum.php"> Pergunta 3 </a> <br/>
+                        <a href="forum.php"> Pergunta 4 </a> <br/>                        
                     </div>
                 </footer>
                 </section>
